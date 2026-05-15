@@ -10,8 +10,7 @@
 		"declaration": true,
 		"declarationDir": "dist",
 		"outDir": "dist",
-		"rootDir": "src",
-		"types": ["vitest/globals", "@testing-library/jest-dom"]
+		"rootDir": "src"
 	},
 	"include": ["src"]
 }

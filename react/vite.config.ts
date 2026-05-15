@@ -8,11 +8,6 @@ export default defineConfig({
 		react(),
 		dts({
 			include: [resolve(__dirname, 'src')],
-			exclude: [
-				resolve(__dirname, 'src/__tests__'),
-				resolve(__dirname, 'src/**/*.test.ts'),
-				resolve(__dirname, 'src/**/*.test.tsx'),
-			],
 			tsconfigPath: resolve(__dirname, 'tsconfig.json'),
 		}),
 	],

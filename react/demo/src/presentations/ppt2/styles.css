@@ -1,0 +1,27 @@
+.reveal .slides section.ppt2-cover,
+.reveal .slides section.ppt2-detail {
+	padding: 2rem;
+	background: #ffffff;
+}
+
+.reveal .slides .ppt2-kicker {
+	margin-bottom: 1rem;
+	font-size: 0.52em;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: #777777;
+}
+
+.reveal .slides section.ppt2-detail ol {
+	margin-top: 1.4rem;
+	display: inline-grid;
+	gap: 0.8rem;
+	text-align: left;
+}
+
+.reveal .slides code {
+	padding: 0.08rem 0.28rem;
+	border-radius: 0.3rem;
+	background: #ededed;
+	font-size: 0.75em;
+}

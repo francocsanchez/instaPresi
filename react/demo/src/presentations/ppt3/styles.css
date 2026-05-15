@@ -1,0 +1,20 @@
+.reveal .slides section.ppt3-cover,
+.reveal .slides section.ppt3-detail {
+	padding: 2rem;
+}
+
+.reveal .slides section.ppt3-cover {
+	background: linear-gradient(180deg, #1a1a1a 0%, #050505 100%);
+}
+
+.reveal .slides section.ppt3-detail {
+	background: linear-gradient(180deg, #262626 0%, #101010 100%);
+}
+
+.reveal .slides .ppt3-kicker {
+	margin-bottom: 1rem;
+	font-size: 0.52em;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: #b5b5b5;
+}
