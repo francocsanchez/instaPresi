@@ -1,0 +1,829 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Users\fsanchez.NIPPONCARSRL\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.2.3
+2 info using node@v22.22.0
+3 timing npm:load:whichnode Completed in 2ms
+4 timing config:load:defaults Completed in 2ms
+5 timing config:load:file:C:\Users\fsanchez.NIPPONCARSRL\AppData\Roaming\npm\node_modules\npm\npmrc Completed in 3ms
+6 timing config:load:builtin Completed in 4ms
+7 timing config:load:cli Completed in 2ms
+8 timing config:load:env Completed in 0ms
+9 timing config:load:file:C:\apps\instaPresi\.npmrc Completed in 0ms
+10 timing config:load:project Completed in 1ms
+11 timing config:load:file:C:\Users\fsanchez.NIPPONCARSRL\.npmrc Completed in 1ms
+12 timing config:load:user Completed in 1ms
+13 timing config:load:file:C:\Users\fsanchez.NIPPONCARSRL\AppData\Roaming\npm\etc\npmrc Completed in 0ms
+14 timing config:load:global Completed in 0ms
+15 timing config:load:setEnvs Completed in 1ms
+16 timing config:load Completed in 12ms
+17 timing npm:load:configload Completed in 12ms
+18 timing config:load:flatten Completed in 3ms
+19 timing npm:load:mkdirpcache Completed in 1ms
+20 timing npm:load:mkdirplogs Completed in 0ms
+21 verbose title npm install
+22 verbose argv "install"
+23 timing npm:load:setTitle Completed in 1ms
+24 timing npm:load:display Completed in 0ms
+25 verbose logfile logs-max:10 dir:C:\apps\instaPresi\.npm-cache\_logs\2026-05-15T02_19_52_843Z-
+26 verbose logfile C:\apps\instaPresi\.npm-cache\_logs\2026-05-15T02_19_52_843Z-debug-0.log
+27 timing npm:load:logFile Completed in 8ms
+28 timing npm:load:timers Completed in 0ms
+29 timing npm:load:configScope Completed in 1ms
+30 timing npm:load Completed in 42ms
+31 timing arborist:ctor Completed in 1ms
+32 silly logfile done cleaning log files
+33 timing idealTree:init Completed in 219ms
+34 timing idealTree:userRequests Completed in 1ms
+35 silly idealTree buildDeps
+36 timing idealTree:#root Completed in 1ms
+37 timing idealTree:buildDeps Completed in 2ms
+38 timing idealTree:fixDepFlags Completed in 0ms
+39 timing idealTree Completed in 233ms
+40 timing arborist:ctor Completed in 0ms
+41 timing reify:loadTrees Completed in 364ms
+42 timing reify:diffTrees Completed in 26ms
+43 silly reify moves {}
+44 timing reify:retireShallow Completed in 1ms
+45 timing reify:createSparse Completed in 66ms
+46 timing reify:loadBundles Completed in 0ms
+47 silly audit bulk request {
+47 silly audit   '@babel/code-frame': [ '7.29.0' ],
+47 silly audit   '@babel/helper-string-parser': [ '7.27.1' ],
+47 silly audit   '@babel/helper-validator-identifier': [ '7.28.5' ],
+47 silly audit   '@babel/parser': [ '7.29.0' ],
+47 silly audit   '@babel/types': [ '7.29.0' ],
+47 silly audit   '@emnapi/core': [ '1.10.0', '1.9.2' ],
+47 silly audit   '@emnapi/runtime': [ '1.10.0', '1.9.2' ],
+47 silly audit   '@emnapi/wasi-threads': [ '1.2.1' ],
+47 silly audit   '@esbuild/aix-ppc64': [ '0.28.0' ],
+47 silly audit   '@esbuild/android-arm': [ '0.28.0' ],
+47 silly audit   '@esbuild/android-arm64': [ '0.28.0' ],
+47 silly audit   '@esbuild/android-x64': [ '0.28.0' ],
+47 silly audit   '@esbuild/darwin-arm64': [ '0.28.0' ],
+47 silly audit   '@esbuild/darwin-x64': [ '0.28.0' ],
+47 silly audit   '@esbuild/freebsd-arm64': [ '0.28.0' ],
+47 silly audit   '@esbuild/freebsd-x64': [ '0.28.0' ],
+47 silly audit   '@esbuild/linux-arm': [ '0.28.0' ],
+47 silly audit   '@esbuild/linux-arm64': [ '0.28.0' ],
+47 silly audit   '@esbuild/linux-ia32': [ '0.28.0' ],
+47 silly audit   '@esbuild/linux-loong64': [ '0.28.0' ],
+47 silly audit   '@esbuild/linux-mips64el': [ '0.28.0' ],
+47 silly audit   '@esbuild/linux-ppc64': [ '0.28.0' ],
+47 silly audit   '@esbuild/linux-riscv64': [ '0.28.0' ],
+47 silly audit   '@esbuild/linux-s390x': [ '0.28.0' ],
+47 silly audit   '@esbuild/linux-x64': [ '0.28.0' ],
+47 silly audit   '@esbuild/netbsd-arm64': [ '0.28.0' ],
+47 silly audit   '@esbuild/netbsd-x64': [ '0.28.0' ],
+47 silly audit   '@esbuild/openbsd-arm64': [ '0.28.0' ],
+47 silly audit   '@esbuild/openbsd-x64': [ '0.28.0' ],
+47 silly audit   '@esbuild/openharmony-arm64': [ '0.28.0' ],
+47 silly audit   '@esbuild/sunos-x64': [ '0.28.0' ],
+47 silly audit   '@esbuild/win32-arm64': [ '0.28.0' ],
+47 silly audit   '@esbuild/win32-ia32': [ '0.28.0' ],
+47 silly audit   '@esbuild/win32-x64': [ '0.28.0' ],
+47 silly audit   '@jridgewell/sourcemap-codec': [ '1.5.5' ],
+47 silly audit   '@microsoft/api-extractor': [ '7.58.2' ],
+47 silly audit   '@microsoft/api-extractor-model': [ '7.33.6' ],
+47 silly audit   'lru-cache': [ '6.0.0', '11.2.6', '7.18.3' ],
+47 silly audit   minimatch: [ '10.2.4', '9.0.9' ],
+47 silly audit   semver: [ '7.5.4', '7.7.4' ],
+47 silly audit   typescript: [ '5.9.3', '6.0.2' ],
+47 silly audit   '@microsoft/tsdoc': [ '0.16.0' ],
+47 silly audit   '@microsoft/tsdoc-config': [ '0.18.1' ],
+47 silly audit   '@napi-rs/wasm-runtime': [ '1.1.3' ],
+47 silly audit   '@oxc-project/types': [ '0.124.0' ],
+47 silly audit   '@parcel/watcher': [ '2.5.0' ],
+47 silly audit   '@parcel/watcher-android-arm64': [ '2.5.0' ],
+47 silly audit   '@parcel/watcher-darwin-arm64': [ '2.5.0' ],
+47 silly audit   '@parcel/watcher-darwin-x64': [ '2.5.0' ],
+47 silly audit   '@parcel/watcher-freebsd-x64': [ '2.5.0' ],
+47 silly audit   '@parcel/watcher-linux-arm-glibc': [ '2.5.0' ],
+47 silly audit   '@parcel/watcher-linux-arm-musl': [ '2.5.0' ],
+47 silly audit   '@parcel/watcher-linux-arm64-glibc': [ '2.5.0' ],
+47 silly audit   '@parcel/watcher-linux-arm64-musl': [ '2.5.0' ],
+47 silly audit   '@parcel/watcher-linux-x64-glibc': [ '2.5.0' ],
+47 silly audit   '@parcel/watcher-linux-x64-musl': [ '2.5.0' ],
+47 silly audit   '@parcel/watcher-win32-arm64': [ '2.5.0' ],
+47 silly audit   '@parcel/watcher-win32-ia32': [ '2.5.0' ],
+47 silly audit   '@parcel/watcher-win32-x64': [ '2.5.0' ],
+47 silly audit   '@puppeteer/browsers': [ '2.13.0' ],
+47 silly audit   '@rolldown/binding-android-arm64': [ '1.0.0-rc.15' ],
+47 silly audit   '@rolldown/binding-darwin-arm64': [ '1.0.0-rc.15' ],
+47 silly audit   '@rolldown/binding-darwin-x64': [ '1.0.0-rc.15' ],
+47 silly audit   '@rolldown/binding-freebsd-x64': [ '1.0.0-rc.15' ],
+47 silly audit   '@rolldown/binding-linux-arm-gnueabihf': [ '1.0.0-rc.15' ],
+47 silly audit   '@rolldown/binding-linux-arm64-gnu': [ '1.0.0-rc.15' ],
+47 silly audit   '@rolldown/binding-linux-arm64-musl': [ '1.0.0-rc.15' ],
+47 silly audit   '@rolldown/binding-linux-ppc64-gnu': [ '1.0.0-rc.15' ],
+47 silly audit   '@rolldown/binding-linux-s390x-gnu': [ '1.0.0-rc.15' ],
+47 silly audit   '@rolldown/binding-linux-x64-gnu': [ '1.0.0-rc.15' ],
+47 silly audit   '@rolldown/binding-linux-x64-musl': [ '1.0.0-rc.15' ],
+47 silly audit   '@rolldown/binding-openharmony-arm64': [ '1.0.0-rc.15' ],
+47 silly audit   '@rolldown/binding-wasm32-wasi': [ '1.0.0-rc.15' ],
+47 silly audit   '@rolldown/binding-win32-arm64-msvc': [ '1.0.0-rc.15' ],
+47 silly audit   '@rolldown/binding-win32-x64-msvc': [ '1.0.0-rc.15' ],
+47 silly audit   '@rolldown/pluginutils': [ '1.0.0-rc.15' ],
+47 silly audit   '@rollup/pluginutils': [ '5.3.0' ],
+47 silly audit   picomatch: [ '4.0.4', '2.3.2' ],
+47 silly audit   '@rushstack/node-core-library': [ '5.22.0' ],
+47 silly audit   '@rushstack/problem-matcher': [ '0.2.1' ],
+47 silly audit   '@rushstack/rig-package': [ '0.7.2' ],
+47 silly audit   '@rushstack/terminal': [ '0.22.5' ],
+47 silly audit   '@rushstack/ts-command-line': [ '5.3.5' ],
+47 silly audit   argparse: [ '1.0.10', '2.0.1' ],
+47 silly audit   '@tootallnate/quickjs-emscripten': [ '0.23.0' ],
+47 silly audit   '@tybys/wasm-util': [ '0.10.1' ],
+47 silly audit   '@types/argparse': [ '1.0.38' ],
+47 silly audit   '@types/estree': [ '1.0.8' ],
+47 silly audit   '@types/node': [ '25.3.0' ],
+47 silly audit   '@types/yauzl': [ '2.10.3' ],
+47 silly audit   '@volar/language-core': [ '2.4.28' ],
+47 silly audit   '@volar/source-map': [ '2.4.28' ],
+47 silly audit   '@volar/typescript': [ '2.4.28' ],
+47 silly audit   '@vue/compiler-core': [ '3.5.29' ],
+47 silly audit   '@vue/compiler-dom': [ '3.5.29' ],
+47 silly audit   '@vue/compiler-vue2': [ '2.7.16' ],
+47 silly audit   '@vue/language-core': [ '2.2.0' ],
+47 silly audit   '@vue/shared': [ '3.5.29' ],
+47 silly audit   acorn: [ '8.16.0' ],
+47 silly audit   'agent-base': [ '7.1.4' ],
+47 silly audit   ajv: [ '8.18.0' ],
+47 silly audit   'ajv-draft-04': [ '1.0.0' ],
+47 silly audit   'ajv-formats': [ '3.0.1' ],
+47 silly audit   'alien-signals': [ '0.4.14' ],
+47 silly audit   'ansi-regex': [ '5.0.1' ],
+47 silly audit   'ansi-styles': [ '4.3.0' ],
+47 silly audit   'ast-types': [ '0.13.4' ],
+47 silly audit   b4a: [ '1.8.0' ],
+47 silly audit   'balanced-match': [ '1.0.2', '4.0.4' ],
+47 silly audit   'bare-events': [ '2.8.2' ],
+47 silly audit   'bare-fs': [ '4.5.5' ],
+47 silly audit   'bare-os': [ '3.7.1' ],
+47 silly audit   'bare-path': [ '3.0.0' ],
+47 silly audit   'bare-stream': [ '2.8.0' ],
+47 silly audit   'bare-url': [ '2.3.2' ],
+47 silly audit   'basic-ftp': [ '5.2.2' ],
+47 silly audit   'brace-expansion': [ '5.0.5', '2.0.3' ],
+47 silly audit   braces: [ '3.0.3' ],
+47 silly audit   'buffer-crc32': [ '0.2.13' ],
+47 silly audit   callsites: [ '3.1.0' ],
+47 silly audit   chokidar: [ '4.0.1' ],
+47 silly audit   'chromium-bidi': [ '14.0.0' ],
+47 silly audit   cliui: [ '8.0.1' ],
+47 silly audit   'color-convert': [ '2.0.1' ],
+47 silly audit   'color-name': [ '1.1.4' ],
+47 silly audit   colors: [ '1.4.0' ],
+47 silly audit   commander: [ '7.2.0' ],
+47 silly audit   'compare-versions': [ '6.1.1' ],
+47 silly audit   confbox: [ '0.2.4', '0.1.8' ],
+47 silly audit   'core-util-is': [ '1.0.3' ],
+47 silly audit   cosmiconfig: [ '9.0.1' ],
+47 silly audit   'data-uri-to-buffer': [ '6.0.2' ],
+47 silly audit   'de-indent': [ '1.0.2' ],
+47 silly audit   debug: [ '4.4.3' ],
+47 silly audit   degenerator: [ '5.0.1' ],
+47 silly audit   'detect-libc': [ '1.0.3', '2.1.2' ],
+47 silly audit   'devtools-protocol': [ '0.0.1581282' ],
+47 silly audit   diff: [ '8.0.3' ],
+47 silly audit   'emoji-regex': [ '8.0.0' ],
+47 silly audit   'end-of-stream': [ '1.4.5' ],
+47 silly audit   entities: [ '7.0.1' ],
+47 silly audit   'env-paths': [ '2.2.1' ],
+47 silly audit   'error-ex': [ '1.3.4' ],
+47 silly audit   esbuild: [ '0.28.0' ],
+47 silly audit   escalade: [ '3.2.0' ],
+47 silly audit   escodegen: [ '2.1.0' ],
+47 silly audit   esprima: [ '4.0.1' ],
+47 silly audit   estraverse: [ '5.3.0' ],
+47 silly audit   'estree-walker': [ '2.0.2' ],
+47 silly audit   esutils: [ '2.0.3' ],
+47 silly audit   'events-universal': [ '1.0.1' ],
+47 silly audit   exsolve: [ '1.0.8' ],
+47 silly audit   'extract-zip': [ '2.0.1' ],
+47 silly audit   'fast-deep-equal': [ '3.1.3' ],
+47 silly audit   'fast-fifo': [ '1.3.2' ],
+47 silly audit   'fast-uri': [ '3.1.0' ],
+47 silly audit   'fd-slicer': [ '1.1.0' ],
+47 silly audit   'fill-range': [ '7.1.1' ],
+47 silly audit   fitty: [ '2.4.2' ],
+47 silly audit   'fs-extra': [ '11.3.4' ],
+47 silly audit   fsevents: [ '2.3.3' ],
+47 silly audit   'function-bind': [ '1.1.2' ],
+47 silly audit   'get-caller-file': [ '2.0.5' ],
+47 silly audit   'get-stream': [ '5.2.0' ],
+47 silly audit   'get-uri': [ '6.0.5' ],
+47 silly audit   glob: [ '13.0.6' ],
+47 silly audit   globalyzer: [ '0.1.0' ],
+47 silly audit   globrex: [ '0.1.2' ],
+47 silly audit   'graceful-fs': [ '4.2.11' ],
+47 silly audit   'has-flag': [ '4.0.0' ],
+47 silly audit   hasown: [ '2.0.2' ],
+47 silly audit   he: [ '1.2.0' ],
+47 silly audit   'highlight.js': [ '11.11.1' ],
+47 silly audit   'http-proxy-agent': [ '7.0.2' ],
+47 silly audit   'https-proxy-agent': [ '7.0.6' ],
+47 silly audit   immediate: [ '3.0.6' ],
+47 silly audit   immutable: [ '5.1.5' ],
+47 silly audit   'import-fresh': [ '3.3.1' ],
+47 silly audit   'import-lazy': [ '4.0.0' ],
+47 silly audit   inherits: [ '2.0.4' ],
+47 silly audit   'ip-address': [ '10.1.0' ],
+47 silly audit   'is-arrayish': [ '0.2.1' ],
+47 silly audit   'is-core-module': [ '2.16.1' ],
+47 silly audit   'is-extglob': [ '2.1.1' ],
+47 silly audit   'is-fullwidth-code-point': [ '3.0.0' ],
+47 silly audit   'is-glob': [ '4.0.3' ],
+47 silly audit   'is-number': [ '7.0.0' ],
+47 silly audit   isarray: [ '1.0.0' ],
+47 silly audit   jju: [ '1.4.0' ],
+47 silly audit   'js-tokens': [ '4.0.0' ],
+47 silly audit   'js-yaml': [ '4.1.1' ],
+47 silly audit   'json-parse-even-better-errors': [ '2.3.1' ],
+47 silly audit   'json-schema-traverse': [ '1.0.0' ],
+47 silly audit   jsonfile: [ '6.2.0' ],
+47 silly audit   jszip: [ '3.10.1' ],
+47 silly audit   kolorist: [ '1.8.0' ],
+47 silly audit   lie: [ '3.3.0' ],
+47 silly audit   lightningcss: [ '1.32.0' ],
+47 silly audit   'lightningcss-android-arm64': [ '1.32.0' ],
+47 silly audit   'lightningcss-darwin-arm64': [ '1.32.0' ],
+47 silly audit   'lightningcss-darwin-x64': [ '1.32.0' ],
+47 silly audit   'lightningcss-freebsd-x64': [ '1.32.0' ],
+47 silly audit   'lightningcss-linux-arm-gnueabihf': [ '1.32.0' ],
+47 silly audit   'lightningcss-linux-arm64-gnu': [ '1.32.0' ],
+47 silly audit   'lightningcss-linux-arm64-musl': [ '1.32.0' ],
+47 silly audit   'lightningcss-linux-x64-gnu': [ '1.32.0' ],
+47 silly audit   'lightningcss-linux-x64-musl': [ '1.32.0' ],
+47 silly audit   'lightningcss-win32-arm64-msvc': [ '1.32.0' ],
+47 silly audit   'lightningcss-win32-x64-msvc': [ '1.32.0' ],
+47 silly audit   'lines-and-columns': [ '1.2.4' ],
+47 silly audit   'local-pkg': [ '1.1.2' ],
+47 silly audit   lodash: [ '4.18.1' ],
+47 silly audit   'magic-string': [ '0.30.21' ],
+47 silly audit   marked: [ '17.0.5' ],
+47 silly audit   'marked-smartypants': [ '1.1.11' ],
+47 silly audit   micromatch: [ '4.0.8' ],
+47 silly audit   minipass: [ '7.1.3' ],
+47 silly audit   mitt: [ '3.0.1' ],
+47 silly audit   mlly: [ '1.8.1' ],
+47 silly audit   'pkg-types': [ '1.3.1', '2.3.0' ],
+47 silly audit   ms: [ '2.1.3' ],
+47 silly audit   'muggle-string': [ '0.4.1' ],
+47 silly audit   nanoid: [ '3.3.11' ],
+47 silly audit   netmask: [ '2.0.2' ],
+47 silly audit   'node-addon-api': [ '7.1.1' ],
+47 silly audit   'node-qunit-puppeteer': [ '2.2.1' ],
+47 silly audit   'node-watch': [ '0.7.3' ],
+47 silly audit   once: [ '1.4.0' ],
+47 silly audit   'pac-proxy-agent': [ '7.2.0' ],
+47 silly audit   'pac-resolver': [ '7.0.1' ],
+47 silly audit   pako: [ '1.0.11' ],
+47 silly audit   'parent-module': [ '1.0.1' ],
+47 silly audit   'parse-json': [ '5.2.0' ],
+47 silly audit   'path-browserify': [ '1.0.1' ],
+47 silly audit   'path-parse': [ '1.0.7' ],
+47 silly audit   'path-scurry': [ '2.0.2' ],
+47 silly audit   pathe: [ '2.0.3' ],
+47 silly audit   pend: [ '1.2.0' ],
+47 silly audit   picocolors: [ '1.1.1' ],
+47 silly audit   postcss: [ '8.5.8' ],
+47 silly audit   'process-nextick-args': [ '2.0.1' ],
+47 silly audit   progress: [ '2.0.3' ],
+47 silly audit   'proxy-agent': [ '6.5.0' ],
+47 silly audit   'proxy-from-env': [ '1.1.0' ],
+47 silly audit   pump: [ '3.0.4' ],
+47 silly audit   puppeteer: [ '24.38.0' ],
+47 silly audit   'puppeteer-core': [ '24.38.0' ],
+47 silly audit   quansync: [ '0.2.11' ],
+47 silly audit   qunit: [ '2.25.0' ],
+47 silly audit   'readable-stream': [ '2.3.8' ],
+47 silly audit   readdirp: [ '4.0.2' ],
+47 silly audit   'require-directory': [ '2.1.1' ],
+47 silly audit   'require-from-string': [ '2.0.2' ],
+47 silly audit   resolve: [ '1.22.11' ],
+47 silly audit   'resolve-from': [ '4.0.0' ],
+47 silly audit   rolldown: [ '1.0.0-rc.15' ],
+47 silly audit   'safe-buffer': [ '5.1.2' ],
+47 silly audit   sass: [ '1.98.0' ],
+47 silly audit   setimmediate: [ '1.0.5' ],
+47 silly audit   'smart-buffer': [ '4.2.0' ],
+47 silly audit   smartypants: [ '0.2.2' ],
+47 silly audit   socks: [ '2.8.7' ],
+47 silly audit   'socks-proxy-agent': [ '8.0.5' ],
+47 silly audit   'source-map': [ '0.6.1' ],
+47 silly audit   'source-map-js': [ '1.2.1' ],
+47 silly audit   'sprintf-js': [ '1.0.3' ],
+47 silly audit   streamx: [ '2.23.0' ],
+47 silly audit   string_decoder: [ '1.1.1' ],
+47 silly audit   'string-argv': [ '0.3.2' ],
+47 silly audit   'string-width': [ '4.2.3' ],
+47 silly audit   'strip-ansi': [ '6.0.1' ],
+47 silly audit   'strip-json-comments': [ '3.1.1' ],
+47 silly audit   'supports-color': [ '8.1.1' ],
+47 silly audit   'supports-preserve-symlinks-flag': [ '1.0.0' ],
+47 silly audit   'tar-fs': [ '3.1.2' ],
+47 silly audit   'tar-stream': [ '3.1.8' ],
+47 silly audit   teex: [ '1.0.1' ],
+47 silly audit   'text-decoder': [ '1.2.7' ],
+47 silly audit   'tiny-glob': [ '0.2.9' ],
+47 silly audit   tinyglobby: [ '0.2.15' ],
+47 silly audit   fdir: [ '6.5.0' ],
+47 silly audit   'to-regex-range': [ '5.0.1' ],
+47 silly audit   tslib: [ '2.8.1' ],
+47 silly audit   'typed-query-selector': [ '2.12.1' ],
+47 silly audit   ufo: [ '1.6.3' ],
+47 silly audit   'undici-types': [ '7.18.2' ],
+47 silly audit   universalify: [ '2.0.1' ],
+47 silly audit   'util-deprecate': [ '1.0.2' ],
+47 silly audit   vite: [ '8.0.8' ],
+47 silly audit   'vite-plugin-dts': [ '4.5.4' ],
+47 silly audit   'vscode-uri': [ '3.1.0' ],
+47 silly audit   'webdriver-bidi-protocol': [ '0.4.1' ],
+47 silly audit   'wrap-ansi': [ '7.0.0' ],
+47 silly audit   wrappy: [ '1.0.2' ],
+47 silly audit   ws: [ '8.19.0' ],
+47 silly audit   y18n: [ '5.0.8' ],
+47 silly audit   yallist: [ '4.0.0' ],
+47 silly audit   yargs: [ '17.7.2' ],
+47 silly audit   'yargs-parser': [ '21.1.1' ],
+47 silly audit   yauzl: [ '2.10.0' ],
+47 silly audit   zod: [ '3.25.76' ]
+47 silly audit }
+48 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\lightningcss-win32-arm64-msvc
+49 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\lightningcss-win32-arm64-msvc' ]
+50 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\lightningcss-linux-x64-musl
+51 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\lightningcss-linux-x64-musl' ]
+52 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\lightningcss-linux-x64-gnu
+53 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\lightningcss-linux-x64-gnu' ]
+54 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\lightningcss-linux-arm64-musl
+55 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\lightningcss-linux-arm64-musl' ]
+56 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\lightningcss-linux-arm64-gnu
+57 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\lightningcss-linux-arm64-gnu' ]
+58 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\lightningcss-linux-arm-gnueabihf
+59 silly reify mark deleted [
+59 silly reify   'C:\\apps\\instaPresi\\node_modules\\lightningcss-linux-arm-gnueabihf'
+59 silly reify ]
+60 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\lightningcss-freebsd-x64
+61 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\lightningcss-freebsd-x64' ]
+62 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\lightningcss-darwin-x64
+63 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\lightningcss-darwin-x64' ]
+64 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\lightningcss-darwin-arm64
+65 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\lightningcss-darwin-arm64' ]
+66 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\lightningcss-android-arm64
+67 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\lightningcss-android-arm64' ]
+68 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\fsevents
+69 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\fsevents' ]
+70 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@rolldown\binding-win32-arm64-msvc
+71 silly reify mark deleted [
+71 silly reify   'C:\\apps\\instaPresi\\node_modules\\@rolldown\\binding-win32-arm64-msvc'
+71 silly reify ]
+72 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@rolldown\binding-wasm32-wasi
+73 silly reify mark deleted [
+73 silly reify   'C:\\apps\\instaPresi\\node_modules\\@rolldown\\binding-wasm32-wasi'
+73 silly reify ]
+74 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@rolldown\binding-wasm32-wasi\node_modules\@emnapi\core
+75 silly reify mark deleted [
+75 silly reify   'C:\\apps\\instaPresi\\node_modules\\@rolldown\\binding-wasm32-wasi\\node_modules\\@emnapi\\core'
+75 silly reify ]
+76 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@rolldown\binding-wasm32-wasi\node_modules\@emnapi\runtime
+77 silly reify mark deleted [
+77 silly reify   'C:\\apps\\instaPresi\\node_modules\\@rolldown\\binding-wasm32-wasi\\node_modules\\@emnapi\\runtime'
+77 silly reify ]
+78 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@napi-rs\wasm-runtime
+79 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@napi-rs\\wasm-runtime' ]
+80 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@emnapi\wasi-threads
+81 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@emnapi\\wasi-threads' ]
+82 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@emnapi\core
+83 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@emnapi\\core' ]
+84 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@emnapi\runtime
+85 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@emnapi\\runtime' ]
+86 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@tybys\wasm-util
+87 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@tybys\\wasm-util' ]
+88 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@rolldown\binding-openharmony-arm64
+89 silly reify mark deleted [
+89 silly reify   'C:\\apps\\instaPresi\\node_modules\\@rolldown\\binding-openharmony-arm64'
+89 silly reify ]
+90 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@rolldown\binding-linux-x64-musl
+91 silly reify mark deleted [
+91 silly reify   'C:\\apps\\instaPresi\\node_modules\\@rolldown\\binding-linux-x64-musl'
+91 silly reify ]
+92 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@rolldown\binding-linux-x64-gnu
+93 silly reify mark deleted [
+93 silly reify   'C:\\apps\\instaPresi\\node_modules\\@rolldown\\binding-linux-x64-gnu'
+93 silly reify ]
+94 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@rolldown\binding-linux-s390x-gnu
+95 silly reify mark deleted [
+95 silly reify   'C:\\apps\\instaPresi\\node_modules\\@rolldown\\binding-linux-s390x-gnu'
+95 silly reify ]
+96 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@rolldown\binding-linux-ppc64-gnu
+97 silly reify mark deleted [
+97 silly reify   'C:\\apps\\instaPresi\\node_modules\\@rolldown\\binding-linux-ppc64-gnu'
+97 silly reify ]
+98 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@rolldown\binding-linux-arm64-musl
+99 silly reify mark deleted [
+99 silly reify   'C:\\apps\\instaPresi\\node_modules\\@rolldown\\binding-linux-arm64-musl'
+99 silly reify ]
+100 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@rolldown\binding-linux-arm64-gnu
+101 silly reify mark deleted [
+101 silly reify   'C:\\apps\\instaPresi\\node_modules\\@rolldown\\binding-linux-arm64-gnu'
+101 silly reify ]
+102 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@rolldown\binding-linux-arm-gnueabihf
+103 silly reify mark deleted [
+103 silly reify   'C:\\apps\\instaPresi\\node_modules\\@rolldown\\binding-linux-arm-gnueabihf'
+103 silly reify ]
+104 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@rolldown\binding-freebsd-x64
+105 silly reify mark deleted [
+105 silly reify   'C:\\apps\\instaPresi\\node_modules\\@rolldown\\binding-freebsd-x64'
+105 silly reify ]
+106 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@rolldown\binding-darwin-x64
+107 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@rolldown\\binding-darwin-x64' ]
+108 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@rolldown\binding-darwin-arm64
+109 silly reify mark deleted [
+109 silly reify   'C:\\apps\\instaPresi\\node_modules\\@rolldown\\binding-darwin-arm64'
+109 silly reify ]
+110 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@rolldown\binding-android-arm64
+111 silly reify mark deleted [
+111 silly reify   'C:\\apps\\instaPresi\\node_modules\\@rolldown\\binding-android-arm64'
+111 silly reify ]
+112 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@parcel\watcher-win32-ia32
+113 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@parcel\\watcher-win32-ia32' ]
+114 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@parcel\watcher-win32-arm64
+115 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@parcel\\watcher-win32-arm64' ]
+116 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@parcel\watcher-linux-x64-musl
+117 silly reify mark deleted [
+117 silly reify   'C:\\apps\\instaPresi\\node_modules\\@parcel\\watcher-linux-x64-musl'
+117 silly reify ]
+118 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@parcel\watcher-linux-x64-glibc
+119 silly reify mark deleted [
+119 silly reify   'C:\\apps\\instaPresi\\node_modules\\@parcel\\watcher-linux-x64-glibc'
+119 silly reify ]
+120 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@parcel\watcher-linux-arm64-musl
+121 silly reify mark deleted [
+121 silly reify   'C:\\apps\\instaPresi\\node_modules\\@parcel\\watcher-linux-arm64-musl'
+121 silly reify ]
+122 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@parcel\watcher-linux-arm64-glibc
+123 silly reify mark deleted [
+123 silly reify   'C:\\apps\\instaPresi\\node_modules\\@parcel\\watcher-linux-arm64-glibc'
+123 silly reify ]
+124 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@parcel\watcher-linux-arm-musl
+125 silly reify mark deleted [
+125 silly reify   'C:\\apps\\instaPresi\\node_modules\\@parcel\\watcher-linux-arm-musl'
+125 silly reify ]
+126 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@parcel\watcher-linux-arm-glibc
+127 silly reify mark deleted [
+127 silly reify   'C:\\apps\\instaPresi\\node_modules\\@parcel\\watcher-linux-arm-glibc'
+127 silly reify ]
+128 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@parcel\watcher-freebsd-x64
+129 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@parcel\\watcher-freebsd-x64' ]
+130 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@parcel\watcher-darwin-x64
+131 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@parcel\\watcher-darwin-x64' ]
+132 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@parcel\watcher-darwin-arm64
+133 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@parcel\\watcher-darwin-arm64' ]
+134 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@parcel\watcher-android-arm64
+135 silly reify mark deleted [
+135 silly reify   'C:\\apps\\instaPresi\\node_modules\\@parcel\\watcher-android-arm64'
+135 silly reify ]
+136 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@esbuild\win32-ia32
+137 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@esbuild\\win32-ia32' ]
+138 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@esbuild\win32-arm64
+139 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@esbuild\\win32-arm64' ]
+140 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@esbuild\sunos-x64
+141 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@esbuild\\sunos-x64' ]
+142 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@esbuild\openharmony-arm64
+143 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@esbuild\\openharmony-arm64' ]
+144 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@esbuild\openbsd-x64
+145 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@esbuild\\openbsd-x64' ]
+146 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@esbuild\openbsd-arm64
+147 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@esbuild\\openbsd-arm64' ]
+148 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@esbuild\netbsd-x64
+149 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@esbuild\\netbsd-x64' ]
+150 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@esbuild\netbsd-arm64
+151 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@esbuild\\netbsd-arm64' ]
+152 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@esbuild\linux-x64
+153 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@esbuild\\linux-x64' ]
+154 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@esbuild\linux-s390x
+155 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@esbuild\\linux-s390x' ]
+156 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@esbuild\linux-riscv64
+157 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@esbuild\\linux-riscv64' ]
+158 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@esbuild\linux-ppc64
+159 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@esbuild\\linux-ppc64' ]
+160 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@esbuild\linux-mips64el
+161 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@esbuild\\linux-mips64el' ]
+162 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@esbuild\linux-loong64
+163 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@esbuild\\linux-loong64' ]
+164 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@esbuild\linux-ia32
+165 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@esbuild\\linux-ia32' ]
+166 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@esbuild\linux-arm64
+167 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@esbuild\\linux-arm64' ]
+168 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@esbuild\linux-arm
+169 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@esbuild\\linux-arm' ]
+170 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@esbuild\freebsd-x64
+171 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@esbuild\\freebsd-x64' ]
+172 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@esbuild\freebsd-arm64
+173 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@esbuild\\freebsd-arm64' ]
+174 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@esbuild\darwin-x64
+175 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@esbuild\\darwin-x64' ]
+176 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@esbuild\darwin-arm64
+177 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@esbuild\\darwin-arm64' ]
+178 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@esbuild\android-x64
+179 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@esbuild\\android-x64' ]
+180 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@esbuild\android-arm64
+181 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@esbuild\\android-arm64' ]
+182 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@esbuild\android-arm
+183 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@esbuild\\android-arm' ]
+184 verbose reify failed optional dependency C:\apps\instaPresi\node_modules\@esbuild\aix-ppc64
+185 silly reify mark deleted [ 'C:\\apps\\instaPresi\\node_modules\\@esbuild\\aix-ppc64' ]
+186 timing reifyNode:node_modules/lightningcss-win32-arm64-msvc Completed in 43ms
+187 timing reifyNode:node_modules/lightningcss-linux-x64-musl Completed in 43ms
+188 timing reifyNode:node_modules/lightningcss-linux-x64-gnu Completed in 44ms
+189 timing reifyNode:node_modules/lightningcss-linux-arm64-musl Completed in 44ms
+190 timing reifyNode:node_modules/lightningcss-linux-arm64-gnu Completed in 43ms
+191 timing reifyNode:node_modules/lightningcss-linux-arm-gnueabihf Completed in 43ms
+192 timing reifyNode:node_modules/lightningcss-freebsd-x64 Completed in 43ms
+193 timing reifyNode:node_modules/lightningcss-darwin-x64 Completed in 44ms
+194 timing reifyNode:node_modules/lightningcss-darwin-arm64 Completed in 44ms
+195 timing reifyNode:node_modules/lightningcss-android-arm64 Completed in 44ms
+196 timing reifyNode:node_modules/fsevents Completed in 44ms
+197 timing reifyNode:node_modules/@rolldown/binding-win32-arm64-msvc Completed in 44ms
+198 timing reifyNode:node_modules/@rolldown/binding-wasm32-wasi Completed in 44ms
+199 timing reifyNode:node_modules/@rolldown/binding-openharmony-arm64 Completed in 44ms
+200 timing reifyNode:node_modules/@rolldown/binding-linux-x64-musl Completed in 45ms
+201 timing reifyNode:node_modules/@rolldown/binding-linux-x64-gnu Completed in 45ms
+202 timing reifyNode:node_modules/@rolldown/binding-linux-s390x-gnu Completed in 44ms
+203 timing reifyNode:node_modules/@rolldown/binding-linux-ppc64-gnu Completed in 44ms
+204 timing reifyNode:node_modules/@rolldown/binding-linux-arm64-musl Completed in 44ms
+205 timing reifyNode:node_modules/@rolldown/binding-linux-arm64-gnu Completed in 44ms
+206 timing reifyNode:node_modules/@rolldown/binding-linux-arm-gnueabihf Completed in 44ms
+207 timing reifyNode:node_modules/@rolldown/binding-freebsd-x64 Completed in 44ms
+208 timing reifyNode:node_modules/@rolldown/binding-darwin-x64 Completed in 44ms
+209 timing reifyNode:node_modules/@rolldown/binding-darwin-arm64 Completed in 44ms
+210 timing reifyNode:node_modules/@rolldown/binding-android-arm64 Completed in 45ms
+211 timing reifyNode:node_modules/@parcel/watcher-win32-ia32 Completed in 45ms
+212 timing reifyNode:node_modules/@parcel/watcher-win32-arm64 Completed in 45ms
+213 timing reifyNode:node_modules/@parcel/watcher-linux-x64-musl Completed in 45ms
+214 timing reifyNode:node_modules/@parcel/watcher-linux-x64-glibc Completed in 45ms
+215 timing reifyNode:node_modules/@parcel/watcher-linux-arm64-musl Completed in 45ms
+216 timing reifyNode:node_modules/@parcel/watcher-linux-arm64-glibc Completed in 45ms
+217 timing reifyNode:node_modules/@parcel/watcher-linux-arm-musl Completed in 45ms
+218 timing reifyNode:node_modules/@parcel/watcher-linux-arm-glibc Completed in 45ms
+219 timing reifyNode:node_modules/@parcel/watcher-freebsd-x64 Completed in 45ms
+220 timing reifyNode:node_modules/@parcel/watcher-darwin-x64 Completed in 45ms
+221 timing reifyNode:node_modules/@parcel/watcher-darwin-arm64 Completed in 44ms
+222 timing reifyNode:node_modules/@parcel/watcher-android-arm64 Completed in 44ms
+223 timing reifyNode:node_modules/@esbuild/win32-ia32 Completed in 43ms
+224 timing reifyNode:node_modules/@esbuild/win32-arm64 Completed in 43ms
+225 timing reifyNode:node_modules/@esbuild/sunos-x64 Completed in 44ms
+226 timing reifyNode:node_modules/@esbuild/openharmony-arm64 Completed in 44ms
+227 timing reifyNode:node_modules/@esbuild/openbsd-x64 Completed in 44ms
+228 timing reifyNode:node_modules/@esbuild/openbsd-arm64 Completed in 44ms
+229 timing reifyNode:node_modules/@esbuild/netbsd-x64 Completed in 44ms
+230 timing reifyNode:node_modules/@esbuild/netbsd-arm64 Completed in 44ms
+231 timing reifyNode:node_modules/@esbuild/linux-x64 Completed in 44ms
+232 timing reifyNode:node_modules/@esbuild/linux-s390x Completed in 44ms
+233 timing reifyNode:node_modules/@esbuild/linux-riscv64 Completed in 43ms
+234 timing reifyNode:node_modules/@esbuild/linux-ppc64 Completed in 43ms
+235 timing reifyNode:node_modules/@esbuild/linux-mips64el Completed in 43ms
+236 timing reifyNode:node_modules/@esbuild/linux-loong64 Completed in 43ms
+237 timing reifyNode:node_modules/@esbuild/linux-ia32 Completed in 44ms
+238 timing reifyNode:node_modules/@esbuild/linux-arm64 Completed in 44ms
+239 timing reifyNode:node_modules/@esbuild/linux-arm Completed in 44ms
+240 timing reifyNode:node_modules/@esbuild/freebsd-x64 Completed in 44ms
+241 timing reifyNode:node_modules/@esbuild/freebsd-arm64 Completed in 43ms
+242 timing reifyNode:node_modules/@esbuild/darwin-x64 Completed in 43ms
+243 timing reifyNode:node_modules/@esbuild/darwin-arm64 Completed in 43ms
+244 timing reifyNode:node_modules/@esbuild/android-x64 Completed in 43ms
+245 timing reifyNode:node_modules/@esbuild/android-arm64 Completed in 43ms
+246 timing reifyNode:node_modules/@esbuild/android-arm Completed in 43ms
+247 timing reifyNode:node_modules/@esbuild/aix-ppc64 Completed in 44ms
+248 silly tarball no local data for @tybys/wasm-util@https://registry.npmjs.org/@tybys/wasm-util/-/wasm-util-0.10.1.tgz. Extracting by manifest.
+249 silly tarball no local data for @napi-rs/wasm-runtime@https://registry.npmjs.org/@napi-rs/wasm-runtime/-/wasm-runtime-1.1.3.tgz. Extracting by manifest.
+250 silly tarball no local data for @emnapi/runtime@https://registry.npmjs.org/@emnapi/runtime/-/runtime-1.10.0.tgz. Extracting by manifest.
+251 silly tarball no local data for @emnapi/wasi-threads@https://registry.npmjs.org/@emnapi/wasi-threads/-/wasi-threads-1.2.1.tgz. Extracting by manifest.
+252 silly tarball no local data for @emnapi/core@https://registry.npmjs.org/@emnapi/core/-/core-1.10.0.tgz. Extracting by manifest.
+253 silly tarball no local data for @emnapi/runtime@https://registry.npmjs.org/@emnapi/runtime/-/runtime-1.9.2.tgz. Extracting by manifest.
+254 silly tarball no local data for @emnapi/core@https://registry.npmjs.org/@emnapi/core/-/core-1.9.2.tgz. Extracting by manifest.
+255 http fetch GET 200 https://registry.npmjs.org/npm 823ms (cache miss)
+256 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 784ms
+257 timing auditReport:getReport Completed in 796ms
+258 silly audit report {
+258 silly audit report   'basic-ftp': [
+258 silly audit report     {
+258 silly audit report       id: 1118825,
+258 silly audit report       url: 'https://github.com/advisories/GHSA-rpmf-866q-6p89',
+258 silly audit report       title: 'basic-ftp allows a malicious FTP server to cause client-side denial of service via unbounded multiline control response buffering',
+258 silly audit report       severity: 'high',
+258 silly audit report       vulnerable_versions: '<=5.3.0',
+258 silly audit report       cwe: [Array],
+258 silly audit report       cvss: [Object]
+258 silly audit report     },
+258 silly audit report     {
+258 silly audit report       id: 1117083,
+258 silly audit report       url: 'https://github.com/advisories/GHSA-rp42-5vxx-qpwr',
+258 silly audit report       title: 'basic-ftp vulnerable to denial of service via unbounded memory consumption in Client.list()',
+258 silly audit report       severity: 'high',
+258 silly audit report       vulnerable_versions: '<=5.2.2',
+258 silly audit report       cwe: [Array],
+258 silly audit report       cvss: [Object]
+258 silly audit report     }
+258 silly audit report   ],
+258 silly audit report   'fast-uri': [
+258 silly audit report     {
+258 silly audit report       id: 1117884,
+258 silly audit report       url: 'https://github.com/advisories/GHSA-v39h-62p7-jpjc',
+258 silly audit report       title: 'fast-uri vulnerable to host confusion via percent-encoded authority delimiters',
+258 silly audit report       severity: 'high',
+258 silly audit report       vulnerable_versions: '<=3.1.1',
+258 silly audit report       cwe: [Array],
+258 silly audit report       cvss: [Object]
+258 silly audit report     },
+258 silly audit report     {
+258 silly audit report       id: 1117870,
+258 silly audit report       url: 'https://github.com/advisories/GHSA-q3j6-qgpj-74h6',
+258 silly audit report       title: 'fast-uri vulnerable to path traversal via percent-encoded dot segments',
+258 silly audit report       severity: 'high',
+258 silly audit report       vulnerable_versions: '<=3.1.0',
+258 silly audit report       cwe: [Array],
+258 silly audit report       cvss: [Object]
+258 silly audit report     }
+258 silly audit report   ],
+258 silly audit report   'ip-address': [
+258 silly audit report     {
+258 silly audit report       id: 1118827,
+258 silly audit report       url: 'https://github.com/advisories/GHSA-v2v4-37r5-5v8g',
+258 silly audit report       title: 'ip-address has XSS in Address6 HTML-emitting methods',
+258 silly audit report       severity: 'moderate',
+258 silly audit report       vulnerable_versions: '<=10.1.0',
+258 silly audit report       cwe: [Array],
+258 silly audit report       cvss: [Object]
+258 silly audit report     }
+258 silly audit report   ],
+258 silly audit report   postcss: [
+258 silly audit report     {
+258 silly audit report       id: 1117015,
+258 silly audit report       url: 'https://github.com/advisories/GHSA-qx2v-qp2m-jg93',
+258 silly audit report       title: 'PostCSS has XSS via Unescaped </style> in its CSS Stringify Output',
+258 silly audit report       severity: 'moderate',
+258 silly audit report       vulnerable_versions: '<8.5.10',
+258 silly audit report       cwe: [Array],
+258 silly audit report       cvss: [Object]
+258 silly audit report     }
+258 silly audit report   ]
+258 silly audit report }
+259 timing metavuln:cache:get:security-advisory:basic-ftp:1PRVnmGNL8rYZpgZAvyPH2nvFd6p8UYB63Bl4yML0P5I4/BEia9ZT0oQKzvYVTM8w+OmHxe2obrZLSbgAdJHxg== Completed in 10ms
+260 timing metavuln:cache:get:security-advisory:basic-ftp:dwgcsujhz5E4o162n5FcYkiUltc7EZwPMDvZGSl61ZbkbeSuMouqA8yQAXEvxv4X8oFUZK0HCwnLBiAckkCl8Q== Completed in 8ms
+261 timing metavuln:cache:get:security-advisory:fast-uri:eOa7c7ILtYrQRi7Vh70WI0pPtbJX306JIRinfkWw7EszqtCMyh5zDLP+J7GgLnqrHAp+szaZMuWjykheayYbvw== Completed in 9ms
+262 timing metavuln:cache:get:security-advisory:fast-uri:QBT+YWg36QlsCGIVyx+qyR2DNhgjC+VCOjRO1zswpjRQn4lFmcf77EeA6ufO4yxSJO9dVgUtRQ76zfsnZLLsHg== Completed in 8ms
+263 timing metavuln:cache:get:security-advisory:ip-address:JagRJ/jzi+hKfT9wwia4ZBLD59vjtPACLl+Z3zhrC+8zTljlC7S7d5t68wAVLZOwEIznyIrsv2WhfUc2gH+cEg== Completed in 8ms
+264 timing metavuln:cache:get:security-advisory:postcss:685RVq5xScaqegAXk2BRJrsMaZmsz1d/volUoA67iVw3AvHhUlX03u+VPRrmo8iuObcSDvuZF+fuiOnLC9L1uA== Completed in 8ms
+265 http fetch GET 200 https://registry.npmjs.org/fast-uri 126ms (cache miss)
+266 timing metavuln:packument:fast-uri Completed in 128ms
+267 timing metavuln:load:security-advisory:fast-uri:1117884 Completed in 4ms
+268 timing metavuln:load:security-advisory:fast-uri:1117870 Completed in 1ms
+269 http fetch GET 200 https://registry.npmjs.org/ip-address 143ms (cache miss)
+270 timing metavuln:packument:ip-address Completed in 145ms
+271 timing metavuln:load:security-advisory:ip-address:1118827 Completed in 3ms
+272 http fetch GET 200 https://registry.npmjs.org/@emnapi/wasi-threads/-/wasi-threads-1.2.1.tgz 832ms (cache miss)
+273 http fetch GET 200 https://registry.npmjs.org/@tybys/wasm-util/-/wasm-util-0.10.1.tgz 839ms (cache miss)
+274 timing reifyNode:node_modules/@emnapi/wasi-threads Completed in 937ms
+275 timing reifyNode:node_modules/@tybys/wasm-util Completed in 943ms
+276 timing metavuln:cache:put:security-advisory:fast-uri:QBT+YWg36QlsCGIVyx+qyR2DNhgjC+VCOjRO1zswpjRQn4lFmcf77EeA6ufO4yxSJO9dVgUtRQ76zfsnZLLsHg== Completed in 71ms
+277 timing metavuln:calculate:security-advisory:fast-uri:1117870 Completed in 206ms
+278 timing metavuln:cache:put:security-advisory:fast-uri:eOa7c7ILtYrQRi7Vh70WI0pPtbJX306JIRinfkWw7EszqtCMyh5zDLP+J7GgLnqrHAp+szaZMuWjykheayYbvw== Completed in 75ms
+279 timing metavuln:calculate:security-advisory:fast-uri:1117884 Completed in 209ms
+280 http fetch GET 200 https://registry.npmjs.org/postcss 208ms (cache miss)
+281 timing metavuln:packument:postcss Completed in 218ms
+282 timing metavuln:load:security-advisory:postcss:1117015 Completed in 24ms
+283 timing metavuln:cache:put:security-advisory:ip-address:JagRJ/jzi+hKfT9wwia4ZBLD59vjtPACLl+Z3zhrC+8zTljlC7S7d5t68wAVLZOwEIznyIrsv2WhfUc2gH+cEg== Completed in 102ms
+284 timing metavuln:calculate:security-advisory:ip-address:1118827 Completed in 251ms
+285 http fetch GET 200 https://registry.npmjs.org/@emnapi/runtime/-/runtime-1.10.0.tgz 953ms (cache miss)
+286 timing reifyNode:node_modules/@emnapi/runtime Completed in 1053ms
+287 timing metavuln:cache:put:security-advisory:postcss:685RVq5xScaqegAXk2BRJrsMaZmsz1d/volUoA67iVw3AvHhUlX03u+VPRrmo8iuObcSDvuZF+fuiOnLC9L1uA== Completed in 34ms
+288 timing metavuln:calculate:security-advisory:postcss:1117015 Completed in 277ms
+289 http fetch GET 200 https://registry.npmjs.org/@emnapi/runtime/-/runtime-1.9.2.tgz 957ms (cache miss)
+290 timing reifyNode:node_modules/@rolldown/binding-wasm32-wasi/node_modules/@emnapi/runtime Completed in 1084ms
+291 http fetch GET 200 https://registry.npmjs.org/basic-ftp 361ms (cache miss)
+292 timing metavuln:packument:basic-ftp Completed in 365ms
+293 timing metavuln:load:security-advisory:basic-ftp:1118825 Completed in 6ms
+294 timing metavuln:load:security-advisory:basic-ftp:1117083 Completed in 7ms
+295 timing metavuln:cache:put:security-advisory:basic-ftp:dwgcsujhz5E4o162n5FcYkiUltc7EZwPMDvZGSl61ZbkbeSuMouqA8yQAXEvxv4X8oFUZK0HCwnLBiAckkCl8Q== Completed in 33ms
+296 timing metavuln:calculate:security-advisory:basic-ftp:1117083 Completed in 411ms
+297 timing metavuln:cache:put:security-advisory:basic-ftp:1PRVnmGNL8rYZpgZAvyPH2nvFd6p8UYB63Bl4yML0P5I4/BEia9ZT0oQKzvYVTM8w+OmHxe2obrZLSbgAdJHxg== Completed in 41ms
+298 timing metavuln:calculate:security-advisory:basic-ftp:1118825 Completed in 414ms
+299 timing metavuln:cache:get:security-advisory:get-uri:gV6dDxXN8aJi6iE17/ZLXAcSs7YaTVJynK0OQ/xCF4GVi55W8ADMu7VAxl5kpQG6dE8UoSH0NsfsA6+X5PGSwQ== Completed in 3ms
+300 http fetch GET 200 https://registry.npmjs.org/@emnapi/core/-/core-1.10.0.tgz 1173ms (cache miss)
+301 timing reifyNode:node_modules/@emnapi/core Completed in 1273ms
+302 http fetch GET 200 https://registry.npmjs.org/@napi-rs/wasm-runtime/-/wasm-runtime-1.1.3.tgz 1194ms (cache miss)
+303 timing reifyNode:node_modules/@napi-rs/wasm-runtime Completed in 1295ms
+304 http fetch GET 200 https://registry.npmjs.org/get-uri 286ms (cache miss)
+305 timing metavuln:packument:get-uri Completed in 287ms
+306 timing metavuln:load:security-advisory:get-uri:1PRVnmGNL8rYZpgZAvyPH2nvFd6p8UYB63Bl4yML0P5I4/BEia9ZT0oQKzvYVTM8w+OmHxe2obrZLSbgAdJHxg== Completed in 8ms
+307 timing metavuln:cache:put:security-advisory:get-uri:gV6dDxXN8aJi6iE17/ZLXAcSs7YaTVJynK0OQ/xCF4GVi55W8ADMu7VAxl5kpQG6dE8UoSH0NsfsA6+X5PGSwQ== Completed in 16ms
+308 timing metavuln:calculate:security-advisory:get-uri:1PRVnmGNL8rYZpgZAvyPH2nvFd6p8UYB63Bl4yML0P5I4/BEia9ZT0oQKzvYVTM8w+OmHxe2obrZLSbgAdJHxg== Completed in 314ms
+309 timing metavuln:cache:get:security-advisory:ajv:2535IqL4tCqU5OyaVN8dtTwacs4Q4tjoVK1YJqNyqo3Zo1N9irq8HdJDgbLflCvcCQRHirUXC4wAIobYvCKBjw== Completed in 2ms
+310 http fetch GET 200 https://registry.npmjs.org/@emnapi/core/-/core-1.9.2.tgz 1435ms (cache miss)
+311 timing reifyNode:node_modules/@rolldown/binding-wasm32-wasi/node_modules/@emnapi/core Completed in 1566ms
+312 timing reify:unpack Completed in 1567ms
+313 timing reify:unretire Completed in 0ms
+314 timing build:queue Completed in 11ms
+315 timing build:deps Completed in 12ms
+316 timing build Completed in 13ms
+317 timing reify:build Completed in 15ms
+318 timing reify:trash Completed in 84ms
+319 timing reify:save Completed in 221ms
+320 http fetch GET 200 https://registry.npmjs.org/ajv 528ms (cache miss)
+321 timing metavuln:packument:ajv Completed in 536ms
+322 timing metavuln:load:security-advisory:ajv:eOa7c7ILtYrQRi7Vh70WI0pPtbJX306JIRinfkWw7EszqtCMyh5zDLP+J7GgLnqrHAp+szaZMuWjykheayYbvw== Completed in 18ms
+323 timing metavuln:cache:put:security-advisory:ajv:2535IqL4tCqU5OyaVN8dtTwacs4Q4tjoVK1YJqNyqo3Zo1N9irq8HdJDgbLflCvcCQRHirUXC4wAIobYvCKBjw== Completed in 10ms
+324 timing metavuln:calculate:security-advisory:ajv:eOa7c7ILtYrQRi7Vh70WI0pPtbJX306JIRinfkWw7EszqtCMyh5zDLP+J7GgLnqrHAp+szaZMuWjykheayYbvw== Completed in 565ms
+325 timing metavuln:cache:get:security-advisory:socks:P58w5lgIiKQWFXUuIoVnI+Zdh3JZloD+AH1iqnW4QQYq5M4adqsx/pezF6SGQ5LAy3610gbA9jLWWgcovN1DLA== Completed in 2ms
+326 http fetch GET 200 https://registry.npmjs.org/socks 291ms (cache miss)
+327 timing metavuln:packument:socks Completed in 294ms
+328 timing metavuln:load:security-advisory:socks:JagRJ/jzi+hKfT9wwia4ZBLD59vjtPACLl+Z3zhrC+8zTljlC7S7d5t68wAVLZOwEIznyIrsv2WhfUc2gH+cEg== Completed in 9ms
+329 timing metavuln:cache:put:security-advisory:socks:P58w5lgIiKQWFXUuIoVnI+Zdh3JZloD+AH1iqnW4QQYq5M4adqsx/pezF6SGQ5LAy3610gbA9jLWWgcovN1DLA== Completed in 13ms
+330 timing metavuln:calculate:security-advisory:socks:JagRJ/jzi+hKfT9wwia4ZBLD59vjtPACLl+Z3zhrC+8zTljlC7S7d5t68wAVLZOwEIznyIrsv2WhfUc2gH+cEg== Completed in 318ms
+331 timing metavuln:cache:get:security-advisory:vite:anAQVIv9ku7SlSaOcqOIP5rn3R+PQqZRf2y4CHP3RuDjlGzMadSoRFi0ZZoT4by8hMtVpmy7xPCXBY2D5grCIA== Completed in 2ms
+332 http fetch GET 200 https://registry.npmjs.org/vite 708ms (cache miss)
+333 timing metavuln:packument:vite Completed in 745ms
+334 timing metavuln:load:security-advisory:vite:685RVq5xScaqegAXk2BRJrsMaZmsz1d/volUoA67iVw3AvHhUlX03u+VPRrmo8iuObcSDvuZF+fuiOnLC9L1uA== Completed in 67ms
+335 timing metavuln:cache:put:security-advisory:vite:anAQVIv9ku7SlSaOcqOIP5rn3R+PQqZRf2y4CHP3RuDjlGzMadSoRFi0ZZoT4by8hMtVpmy7xPCXBY2D5grCIA== Completed in 6ms
+336 timing metavuln:calculate:security-advisory:vite:685RVq5xScaqegAXk2BRJrsMaZmsz1d/volUoA67iVw3AvHhUlX03u+VPRrmo8iuObcSDvuZF+fuiOnLC9L1uA== Completed in 821ms
+337 timing auditReport:init Completed in 2433ms
+338 timing reify:audit Completed in 3232ms
+339 timing reify Completed in 3787ms
+340 silly ADD
+341 silly ADD
+342 silly ADD
+343 silly ADD
+344 silly ADD
+345 silly ADD
+346 silly ADD
+347 silly ADD
+348 silly ADD
+349 silly ADD
+350 silly ADD
+351 silly ADD
+352 silly ADD
+353 silly ADD
+354 silly ADD node_modules/@emnapi/runtime
+355 silly ADD node_modules/@emnapi/core
+356 silly ADD
+357 silly ADD
+358 silly ADD
+359 silly ADD
+360 silly ADD
+361 silly ADD
+362 silly ADD
+363 silly ADD
+364 silly ADD
+365 silly ADD
+366 silly ADD
+367 silly ADD
+368 silly ADD
+369 silly ADD
+370 silly ADD
+371 silly ADD
+372 silly ADD
+373 silly ADD
+374 silly ADD
+375 silly ADD
+376 silly ADD
+377 silly ADD
+378 silly ADD
+379 silly ADD
+380 silly ADD
+381 silly ADD
+382 silly ADD
+383 silly ADD
+384 silly ADD
+385 silly ADD
+386 silly ADD
+387 silly ADD
+388 silly ADD
+389 silly ADD
+390 silly ADD
+391 silly ADD
+392 silly ADD
+393 silly ADD
+394 silly ADD
+395 silly ADD
+396 silly ADD
+397 silly ADD
+398 silly ADD
+399 silly ADD
+400 silly ADD
+401 silly ADD
+402 silly ADD
+403 silly ADD
+404 silly ADD
+405 silly ADD
+406 silly ADD
+407 silly ADD
+408 silly ADD
+409 timing command:install Completed in 3811ms
+410 notice
+410 notice New major version of npm available! 10.2.3 -> 11.14.1
+410 notice Changelog: <https://github.com/npm/cli/releases/tag/v11.14.1>
+410 notice Run `npm install -g npm@11.14.1` to update!
+410 notice
+411 verbose exit 0
+412 timing npm Completed in 5175ms
+413 info ok

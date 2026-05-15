@@ -1,0 +1,9 @@
+[20476:28556:0514/233550.239:ERROR:chrome\installer\util\google_update_settings_win.cc:270] Failed opening key Software\Google\Update\ClientStateMedium\{8A69D345-D564-463c-AFF1-A69D9E530F96} to set usagestats; result: 5
+[20476:1844:0514/233550.295:ERROR:services\device\public\cpp\geolocation\system_geolocation_source_win.cc:255] Failed to get location access status: Controlador no válido. (0x80070006)
+[20476:27168:0514/233550.555:ERROR:content\browser\gpu\gpu_process_host.cc:999] GPU process exited unexpectedly: exit_code=-1073741790
+[20476:27168:0514/233550.732:ERROR:content\browser\gpu\gpu_process_host.cc:999] GPU process exited unexpectedly: exit_code=-1073741790
+[20476:27168:0514/233550.837:ERROR:content\browser\gpu\gpu_process_host.cc:999] GPU process exited unexpectedly: exit_code=-1073741790
+[20476:27168:0514/233551.072:ERROR:content\browser\gpu\gpu_process_host.cc:999] GPU process exited unexpectedly: exit_code=-1073741790
+[20476:27168:0514/233551.147:ERROR:content\browser\gpu\gpu_process_host.cc:999] GPU process exited unexpectedly: exit_code=-1073741790
+[20476:27168:0514/233551.205:ERROR:content\browser\gpu\gpu_process_host.cc:999] GPU process exited unexpectedly: exit_code=-1073741790
+[20476:27168:0514/233551.205:FATAL:content\browser\gpu\gpu_data_manager_impl_private.cc:417] GPU process isn't usable. Goodbye.
