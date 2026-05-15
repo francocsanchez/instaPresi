@@ -69,6 +69,8 @@
 		"dev": "npm run --prefix react/demo dev",
 		"start": "npm run dev",
 		"create:ppt": "node scripts/create-ppt.js",
+		"delete:ppt": "node scripts/delete-ppt.js",
+		"list:ppt": "node scripts/list-ppt.js",
 		"dev:core": "vite",
 		"prepack": "npm run build",
 		"build:core": "tsc && vite build && vite build -c vite.config.styles.ts && node scripts/add-banner.js dist/reveal.js",

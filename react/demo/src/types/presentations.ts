@@ -1,8 +1,9 @@
 import type { ComponentType } from 'react';
 
 export type PresentationMetadata = {
-	id: string;
+	id?: string;
 	title: string;
+	slug?: string;
 	author: string;
 	date: string;
 	categories: string[];

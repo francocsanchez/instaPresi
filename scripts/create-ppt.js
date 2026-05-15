@@ -1,53 +1,18 @@
 import { existsSync } from 'node:fs';
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { stdin as input, stdout as output } from 'node:process';
 import { createInterface } from 'node:readline/promises';
-import { fileURLToPath } from 'node:url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const projectRoot = path.resolve(__dirname, '..');
-const presentationsDir = path.join(
-	projectRoot,
-	'react',
-	'demo',
-	'src',
-	'presentations'
-);
-const catalogPath = path.join(
-	projectRoot,
-	'react',
-	'demo',
-	'src',
-	'data',
-	'presentations.ts'
-);
-
-function slugify(value) {
-	return value
-		.normalize('NFD')
-		.replace(/[\u0300-\u036f]/g, '')
-		.toLowerCase()
-		.replace(/[^a-z0-9]+/g, '-')
-		.replace(/^-+|-+$/g, '');
-}
-
-function toPascalCase(value) {
-	return value
-		.split('-')
-		.filter(Boolean)
-		.map((chunk) => chunk.charAt(0).toUpperCase() + chunk.slice(1))
-		.join('');
-}
-
-function escapeForSingleQuotedTs(value) {
-	return value.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
-}
-
-function formatCategories(categories) {
-	return categories.map((category) => `'${escapeForSingleQuotedTs(category)}'`).join(', ');
-}
+import {
+	addPresentationToCatalog,
+	collectExistingIds,
+	ensureCatalogSlugAvailable,
+	formatCategories,
+	generatePresentationId,
+	presentationsDir,
+	readCatalogFile,
+	slugify,
+} from './presentation-catalog.js';
 
 function buildPresentationTsx({ classPrefix }) {
 	return `import { Deck, Slide } from '@revealjs/react';
@@ -81,6 +46,7 @@ function Presentation() {
 						<p className="${classPrefix}__eyebrow">Presentacion</p>
 						<h1>{presentationMetadata.title}</h1>
 						<div className="${classPrefix}__meta">
+							<p><strong>ID</strong> {presentationMetadata.id}</p>
 							<p><strong>Autor</strong> {presentationMetadata.author}</p>
 							<p><strong>Fecha</strong> {presentationMetadata.date}</p>
 							<p>
@@ -133,12 +99,13 @@ export default Presentation;
 `;
 }
 
-function buildDataTs({ title, author, date, categories }) {
+function buildDataTs({ id, title, author, date, categories }) {
 	return `export const presentationMetadata = {
-	title: '${escapeForSingleQuotedTs(title)}',
+	id: '${id}',
+	title: '${title.replace(/\\/g, '\\\\').replace(/'/g, "\\'")}',
 	subtitle: 'Resumen inicial',
-	author: '${escapeForSingleQuotedTs(author)}',
-	date: '${escapeForSingleQuotedTs(date)}',
+	author: '${author.replace(/\\/g, '\\\\').replace(/'/g, "\\'")}',
+	date: '${date.replace(/\\/g, '\\\\').replace(/'/g, "\\'")}',
 	categories: [${formatCategories(categories)}],
 };
 
@@ -276,82 +243,6 @@ function buildStylesCss(classPrefix) {
 `;
 }
 
-function buildCatalogEntry({ slug, title, author, date, categories, componentName }) {
-	return `\t{
-\t\tid: '${escapeForSingleQuotedTs(slug)}',
-\t\ttitle: '${escapeForSingleQuotedTs(title)}',
-\t\tauthor: '${escapeForSingleQuotedTs(author)}',
-\t\tdate: '${escapeForSingleQuotedTs(date)}',
-\t\tcategories: [${formatCategories(categories)}],
-\t\tpath: '/presentations/${escapeForSingleQuotedTs(slug)}',
-\t\tcomponent: ${componentName},
-\t},`;
-}
-
-async function ensureCatalogSlugAvailable(slug) {
-	const catalogContent = await readFile(catalogPath, 'utf8');
-	const importPathFragment = `../presentations/${slug}/Presentation`;
-
-	if (
-		catalogContent.includes(`id: '${slug}'`) ||
-		catalogContent.includes(`path: '/presentations/${slug}'`) ||
-		catalogContent.includes(importPathFragment)
-	) {
-		throw new Error(
-			`La presentacion "${slug}" ya figura en el catalogo. No se sobrescribio ningun archivo.`
-		);
-	}
-}
-
-async function updateCatalog({ slug, title, author, date, categories }) {
-	const componentName = `${toPascalCase(slug)}Presentation`;
-	const importLine = `import ${componentName} from '../presentations/${slug}/Presentation';`;
-	const catalogContent = await readFile(catalogPath, 'utf8');
-	const typeImportLine =
-		"import type { PresentationDefinition } from '../types/presentations';";
-
-	if (!catalogContent.includes(typeImportLine)) {
-		return {
-			updated: false,
-			manualFile: catalogPath,
-			reason: 'No se encontro el punto de insercion del import de tipos.',
-		};
-	}
-
-	let updatedContent = catalogContent.replace(
-		typeImportLine,
-		`${importLine}\n${typeImportLine}`
-	);
-
-	const arrayEndMarker = '];';
-	const arrayEndIndex = updatedContent.lastIndexOf(arrayEndMarker);
-	if (arrayEndIndex === -1) {
-		return {
-			updated: false,
-			manualFile: catalogPath,
-			reason: 'No se encontro el cierre del array de presentaciones.',
-		};
-	}
-
-	const entry = buildCatalogEntry({
-		slug,
-		title,
-		author,
-		date,
-		categories,
-		componentName,
-	});
-
-	updatedContent = `${updatedContent.slice(0, arrayEndIndex)}${entry}\n${updatedContent.slice(arrayEndIndex)}`;
-	await writeFile(catalogPath, updatedContent, 'utf8');
-
-	return {
-		updated: true,
-		manualFile: null,
-		reason: null,
-	};
-}
-
 async function askRequiredQuestion(rl, label) {
 	const answer = (await rl.question(`${label}: `)).trim();
 	if (!answer) {
@@ -422,9 +313,11 @@ async function main() {
 
 		await ensureCatalogSlugAvailable(slug);
 
+		const catalogContent = await readCatalogFile();
+		const id = generatePresentationId(collectExistingIds(catalogContent));
 		const classPrefix = `ppt-${slug}`;
-		await mkdir(presentationDir, { recursive: false });
 
+		await mkdir(presentationDir, { recursive: false });
 		await writeFile(
 			path.join(presentationDir, 'Presentation.tsx'),
 			buildPresentationTsx({ classPrefix }),
@@ -432,7 +325,7 @@ async function main() {
 		);
 		await writeFile(
 			path.join(presentationDir, 'data.ts'),
-			buildDataTs({ title, author, date, categories }),
+			buildDataTs({ id, title, author, date, categories }),
 			'utf8'
 		);
 		await writeFile(
@@ -441,10 +334,18 @@ async function main() {
 			'utf8'
 		);
 
-		catalogResult = await updateCatalog({ slug, title, author, date, categories });
+		catalogResult = await addPresentationToCatalog({
+			id,
+			title,
+			slug,
+			author,
+			date,
+			categories,
+		});
 
 		console.log('');
 		console.log('Presentacion creada correctamente:');
+		console.log(`- ID: ${id}`);
 		console.log(`- Titulo: ${title}`);
 		console.log(`- Autor: ${author}`);
 		console.log(`- Fecha: ${date}`);
