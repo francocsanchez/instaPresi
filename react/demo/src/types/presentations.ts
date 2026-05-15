@@ -6,6 +6,7 @@ export type PresentationMetadata = {
 	slug?: string;
 	author: string;
 	date: string;
+	slides?: number;
 	categories: string[];
 	path: string;
 };

@@ -1,6 +1,5 @@
 import type { PropsWithChildren } from 'react';
 import HomeButton from './HomeButton';
-import './home-button.css';
 
 type PresentationFrameProps = PropsWithChildren<{
 	homeButtonVariant?: 'light' | 'dark';
@@ -11,8 +10,8 @@ function PresentationFrame({
 	homeButtonVariant = 'light',
 }: PresentationFrameProps) {
 	return (
-		<div className="presentation-frame">
-			<div className="presentation-frame__home">
+		<div className="relative h-screen w-full overflow-hidden bg-white [&_.reveal]:h-full [&_.reveal]:w-full">
+			<div className="pointer-events-none fixed top-4 right-4 z-30 sm:top-3 sm:right-3">
 				<HomeButton variant={homeButtonVariant} />
 			</div>
 			{children}

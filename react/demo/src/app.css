@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+	--color-ui-bg: #f8fafc;
+	--color-ui-surface: #ffffff;
+	--color-ui-muted: #f8fafc;
+	--color-ui-border: #e2e8f0;
+	--color-ui-border-strong: #cbd5e1;
+	--color-ui-text-strong: #0f172a;
+	--color-ui-text: #334155;
+	--color-ui-text-soft: #64748b;
+	--color-ui-text-faint: #94a3b8;
+	--radius-ui: 0.5rem;
+	--radius-code: 0.28rem;
+	--tracking-label: 0.18em;
+}
+
+@layer base {
+	html,
+	body,
+	#root {
+		margin: 0;
+		width: 100%;
+		min-height: 100%;
+	}
+
+	body {
+		overflow-x: clip;
+		font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+		background: var(--color-ui-bg);
+		color: var(--color-ui-text);
+	}
+}

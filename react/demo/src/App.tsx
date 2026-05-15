@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import PresentationMenu from './components/PresentationMenu';
 import PresentationRouter from './components/PresentationRouter';
 import { presentations } from './data/presentations';
+import HomePage from './pages/HomePage';
 import { getRoute } from './utils/routing';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
 	}, []);
 
 	if (route.kind === 'home') {
-		return <PresentationMenu presentations={presentations} />;
+		return <HomePage presentations={presentations} />;
 	}
 
 	return <PresentationRouter route={route} presentations={presentations} />;

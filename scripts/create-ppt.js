@@ -35,59 +35,69 @@ function Presentation() {
 					hash: true,
 					controls: true,
 					progress: true,
-					center: true,
+					center: false,
+					margin: 0,
+					disableLayout: true,
 					transition: 'slide',
-					width: 1280,
-					height: 720,
+					width: '100%',
+					height: '100%',
 				}}
 			>
 				<Slide className="${classPrefix} ${classPrefix}--cover">
-					<div className="${classPrefix}__hero">
-						<p className="${classPrefix}__eyebrow">Presentacion</p>
-						<h1>{presentationMetadata.title}</h1>
-						<div className="${classPrefix}__meta">
-							<p><strong>ID</strong> {presentationMetadata.id}</p>
-							<p><strong>Autor</strong> {presentationMetadata.author}</p>
-							<p><strong>Fecha</strong> {presentationMetadata.date}</p>
-							<p>
-								<strong>Categorias</strong> {presentationMetadata.categories.join(' | ')}
-							</p>
+					<div className="${classPrefix}__surface">
+						<div className="${classPrefix}__hero">
+							<p className="${classPrefix}__eyebrow">Presentacion</p>
+							<h1>{presentationMetadata.title}</h1>
+							<div className="${classPrefix}__meta">
+								<p><strong>ID</strong> {presentationMetadata.id}</p>
+								<p><strong>Autor</strong> {presentationMetadata.author}</p>
+								<p><strong>Fecha</strong> {presentationMetadata.date}</p>
+								<p>
+									<strong>Categorias</strong> {presentationMetadata.categories.join(' | ')}
+								</p>
+							</div>
 						</div>
 					</div>
 				</Slide>
 
 				<Slide className="${classPrefix} ${classPrefix}--content">
-					<div className="${classPrefix}__panel">
-						<p className="${classPrefix}__eyebrow">Agenda</p>
-						<h2>{presentationMetadata.subtitle}</h2>
-						<ul className="${classPrefix}__list">
-							{agendaItems.map((item) => (
-								<li key={item}>{item}</li>
-							))}
-						</ul>
+					<div className="${classPrefix}__surface">
+						<div className="${classPrefix}__panel">
+							<p className="${classPrefix}__eyebrow">Agenda</p>
+							<h2>{presentationMetadata.subtitle}</h2>
+							<ul className="${classPrefix}__list">
+								{agendaItems.map((item) => (
+									<li key={item}>{item}</li>
+								))}
+							</ul>
+						</div>
 					</div>
 				</Slide>
 
 				<Slide className="${classPrefix} ${classPrefix}--content">
-					<div className="${classPrefix}__panel">
-						<p className="${classPrefix}__eyebrow">Contenido</p>
-						<h2>Desarrollo</h2>
-						<div className="${classPrefix}__grid">
-							{contentCards.map((card) => (
-								<article key={card.title} className="${classPrefix}__card">
-									<h3>{card.title}</h3>
-									<p>{card.text}</p>
-								</article>
-							))}
+					<div className="${classPrefix}__surface">
+						<div className="${classPrefix}__panel">
+							<p className="${classPrefix}__eyebrow">Contenido</p>
+							<h2>Desarrollo</h2>
+							<div className="${classPrefix}__grid">
+								{contentCards.map((card) => (
+									<article key={card.title} className="${classPrefix}__card">
+										<h3>{card.title}</h3>
+										<p>{card.text}</p>
+									</article>
+								))}
+							</div>
 						</div>
 					</div>
 				</Slide>
 
 				<Slide className="${classPrefix} ${classPrefix}--closing">
-					<div className="${classPrefix}__panel">
-						<p className="${classPrefix}__eyebrow">Cierre</p>
-						<h2>Gracias</h2>
-						<p>{closingMessage}</p>
+					<div className="${classPrefix}__surface">
+						<div className="${classPrefix}__panel">
+							<p className="${classPrefix}__eyebrow">Cierre</p>
+							<h2>Gracias</h2>
+							<p>{closingMessage}</p>
+						</div>
 					</div>
 				</Slide>
 			</Deck>
@@ -137,7 +147,28 @@ export const closingMessage =
 
 function buildStylesCss(classPrefix) {
 	return `.${classPrefix} {
-	padding: 3.5rem !important;
+	width: 100% !important;
+	height: 100% !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	inset: 0 !important;
+	box-sizing: border-box;
+	overflow: hidden;
+	background: transparent !important;
+}
+
+.presentation-frame .reveal,
+.presentation-frame .reveal .slides,
+.presentation-frame .reveal .slides > section.${classPrefix} {
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.${classPrefix}__surface {
+	width: 100%;
+	height: 100%;
+	padding: 3.5rem;
+	box-sizing: border-box;
 	color: #14213d;
 	background:
 		radial-gradient(circle at top right, rgba(249, 199, 79, 0.35), transparent 28%),
