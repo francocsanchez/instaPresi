@@ -8,6 +8,8 @@ El flujo actual ya esta preparado para:
 - abrir cada deck desde su propia ruta
 - mantener cada presentacion aislada en su propia carpeta
 - crear nuevas presentaciones desde consola con `npm run create:ppt`
+- listar presentaciones registradas con `npm run list:ppt`
+- eliminar presentaciones por ID con `npm run delete:ppt -- ID`
 
 ## Base del proyecto
 
@@ -91,7 +93,9 @@ El comando pide por consola:
 
 Con esos datos el script:
 
+- genera un ID unico de 6 caracteres para la presentacion
 - genera un slug en minusculas, con guiones y sin caracteres especiales
+- valida que el ID no colisione con otro ya cargado en el catalogo
 - valida que no exista ya una carpeta con ese slug
 - crea una carpeta nueva dentro de `react/demo/src/presentations/<slug>/`
 - genera `Presentation.tsx`, `styles.css` y `data.ts`
@@ -115,6 +119,64 @@ La plantilla inicial incluye:
 
 Si el slug ya existe, el script muestra error y no sobrescribe archivos.
 
+Al finalizar, el comando muestra un resumen con:
+
+- ID
+- titulo
+- autor
+- fecha
+- categorias
+- carpeta
+- ruta
+
+## Listar presentaciones
+
+Para ver todas las presentaciones registradas en el catalogo:
+
+```bash
+npm run list:ppt
+```
+
+El comando muestra una salida simple con este formato:
+
+```txt
+id: A7F3K9 - Patentamientos 2025
+id: B8K2L1 - Informe Comercial Mayo
+```
+
+Si una presentacion antigua no tiene ID, se muestra como `SIN_ID`.
+
+Si no hay presentaciones cargadas, el comando informa el estado vacio y muestra como crear la primera con:
+
+```bash
+npm run create:ppt
+```
+
+## Eliminar una presentacion
+
+Para eliminar una presentacion existente por ID:
+
+```bash
+npm run delete:ppt -- ID
+```
+
+Ejemplo:
+
+```bash
+npm run delete:ppt -- A7F3K9
+```
+
+El comando:
+
+- busca la presentacion en el catalogo por ID
+- muestra los datos encontrados antes de borrar
+- pide confirmacion por consola
+- valida que la carpeta a borrar este dentro de `react/demo/src/presentations/`
+- elimina la carpeta completa de la presentacion
+- actualiza el catalogo automaticamente cuando puede hacerlo de forma segura
+
+Si no envias el ID, el script muestra ayuda con el formato correcto. Si el ID no existe, no borra nada.
+
 ## Catalogo y menu
 
 El menu inicial esta separado de la logica de cada deck.
@@ -127,6 +189,18 @@ El menu inicial esta separado de la logica de cada deck.
 ## Alta manual
 
 Si alguna vez necesitas crear un deck sin usar el script, la estructura minima esperada sigue siendo una carpeta propia dentro de `react/demo/src/presentations/` y un registro en `react/demo/src/data/presentations.ts`.
+
+El catalogo puede convivir con presentaciones antiguas sin `id`, pero todas las nuevas creadas con `npm run create:ppt` ya salen con ID unico.
+
+## Estado vacio
+
+El proyecto puede funcionar sin presentaciones cargadas.
+
+En ese caso:
+
+- el catalogo puede quedar vacio en `react/demo/src/data/presentations.ts`
+- `npm run list:ppt` muestra una ayuda rapida para crear la primera presentacion
+- luego puedes reconstruir el catalogo usando solamente `npm run create:ppt`
 
 ## Que mantiene Reveal.js
 
@@ -144,6 +218,9 @@ Aunque la entrada del proyecto esta controlada por React, Reveal.js sigue siendo
 
 - [package.json](C:/apps/instaPresi/package.json): scripts principales del proyecto
 - [create-ppt.js](C:/apps/instaPresi/scripts/create-ppt.js): generador de nuevas presentaciones
+- [delete-ppt.js](C:/apps/instaPresi/scripts/delete-ppt.js): eliminacion segura de presentaciones por ID
+- [list-ppt.js](C:/apps/instaPresi/scripts/list-ppt.js): listado de presentaciones desde consola
+- [presentation-catalog.js](C:/apps/instaPresi/scripts/presentation-catalog.js): utilidades compartidas para leer y actualizar el catalogo
 - [react/demo/package.json](C:/apps/instaPresi/react/demo/package.json): app React principal
 - [presentations.ts](C:/apps/instaPresi/react/demo/src/data/presentations.ts): catalogo de presentaciones
 - [README_PRESENTACIONES.md](C:/apps/instaPresi/README_PRESENTACIONES.md): guia breve centrada en el flujo de decks
