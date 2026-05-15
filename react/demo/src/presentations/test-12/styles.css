@@ -1,0 +1,104 @@
+.ppt-test-12 {
+	padding: 3.5rem !important;
+	color: #14213d;
+	background:
+		radial-gradient(circle at top right, rgba(249, 199, 79, 0.35), transparent 28%),
+		linear-gradient(135deg, #f8fbff 0%, #edf4ff 50%, #ffffff 100%);
+	font-family: 'Aptos', 'Segoe UI', sans-serif;
+}
+
+.ppt-test-12--cover {
+	display: grid !important;
+	place-items: center;
+}
+
+.ppt-test-12__hero,
+.ppt-test-12__panel {
+	width: min(100%, 52rem);
+	padding: 2.5rem 2.75rem;
+	border-radius: 2rem;
+	background: rgba(255, 255, 255, 0.82);
+	box-shadow: 0 22px 60px rgba(20, 33, 61, 0.12);
+	text-align: left;
+}
+
+.ppt-test-12 h1,
+.ppt-test-12 h2,
+.ppt-test-12 h3 {
+	margin: 0;
+	color: #0b132b;
+	font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.ppt-test-12 h1 {
+	font-size: 3rem;
+	line-height: 1.05;
+}
+
+.ppt-test-12 h2 {
+	font-size: 2.35rem;
+}
+
+.ppt-test-12 p {
+	margin: 0;
+}
+
+.ppt-test-12__eyebrow {
+	margin-bottom: 1rem !important;
+	font-size: 0.9rem;
+	font-weight: 700;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: #d97706;
+}
+
+.ppt-test-12__meta {
+	display: grid;
+	gap: 0.75rem;
+	margin-top: 1.75rem;
+	font-size: 1.1rem;
+	line-height: 1.45;
+}
+
+.ppt-test-12__meta strong {
+	display: inline-block;
+	min-width: 6.5rem;
+	color: #334155;
+}
+
+.ppt-test-12__panel {
+	display: grid;
+	gap: 1rem;
+}
+
+.ppt-test-12__list {
+	margin: 0;
+	padding-left: 1.4rem;
+	display: grid;
+	gap: 0.75rem;
+	font-size: 1.15rem;
+	line-height: 1.5;
+}
+
+.ppt-test-12__grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 1rem;
+}
+
+.ppt-test-12__card {
+	padding: 1.25rem;
+	border-radius: 1.2rem;
+	background: rgba(236, 244, 255, 0.95);
+	border: 1px solid rgba(148, 163, 184, 0.28);
+	display: grid;
+	gap: 0.75rem;
+	min-height: 14rem;
+	align-content: start;
+}
+
+.ppt-test-12__card p {
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #334155;
+}

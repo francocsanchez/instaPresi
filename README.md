@@ -1,46 +1,28 @@
 # instaPresi
 
-Este proyecto es un clon/base de `reveal.js` adaptado para un flujo propio de presentaciones en React.
+Este proyecto usa `reveal.js` como motor de slides y una app React como punto de entrada para navegar un catalogo de presentaciones.
 
-Tomamos `reveal.js` como motor principal de slides y navegación, pero el proyecto actual ya no se usa como la demo original del framework. Hoy está preparado para trabajar con:
+El flujo actual ya esta preparado para:
 
-- React como capa de interfaz
-- `@revealjs/react` para renderizar cada presentación
-- un menú inicial en `/` para elegir qué presentación abrir
-- una estructura ordenada para agregar nuevas presentaciones fácilmente
+- mostrar un menu inicial en `/`
+- abrir cada deck desde su propia ruta
+- mantener cada presentacion aislada en su propia carpeta
+- crear nuevas presentaciones desde consola con `npm run create:ppt`
 
 ## Base del proyecto
 
-El repositorio parte de `reveal.js`, el framework open source de presentaciones HTML creado por Hakim El Hattab.
+El repositorio parte de `reveal.js`, el framework open source de presentaciones HTML creado por Hakim El Hattab, y suma una capa propia en React con `@revealjs/react`.
 
-Sobre esa base se armó una implementación propia para que:
-
-- al entrar a `localhost` se vea primero un menú
-- cada presentación viva en su propia carpeta
-- Reveal.js siga funcionando dentro de cada deck
-- el proyecto quede listo para escalar con nuevas presentaciones
-
-## Estado actual
-
-Actualmente la app principal funciona desde React y muestra primero un menú de presentaciones.
-
-Flujo de uso:
+## Flujo actual
 
 1. Entrar a `/`
 2. Ver el listado de presentaciones disponibles
-3. Hacer click en una opción
-4. Abrir la presentación correspondiente en Reveal.js
-
-Rutas actuales:
-
-- `/`
-- `/presentations/ppt1`
-- `/presentations/ppt2`
-- `/presentations/ppt3`
+3. Elegir una opcion
+4. Abrir la presentacion correspondiente en Reveal.js
 
 ## Estructura principal
 
-La parte activa del proyecto está organizada dentro de `react/demo/src/`.
+La parte activa del proyecto vive dentro de `react/demo/src/`.
 
 ```txt
 react/demo/src/
@@ -48,8 +30,9 @@ react/demo/src/
     PresentationMenu.tsx
     PresentationRouter.tsx
     menu.css
+  data/
+    presentations.ts
   presentations/
-    catalog.ts
     ppt1/
       Presentation.tsx
       styles.css
@@ -65,9 +48,9 @@ react/demo/src/
   main.tsx
 ```
 
-## Cómo levantar el proyecto
+## Como levantar el proyecto
 
-Instalación:
+Instalacion:
 
 ```bash
 npm install
@@ -79,7 +62,7 @@ Modo desarrollo:
 npm run dev
 ```
 
-Build de producción:
+Build de produccion:
 
 ```bash
 npm run build
@@ -91,65 +74,83 @@ La app de desarrollo abre en:
 http://localhost:5173/
 ```
 
-## Cómo funciona el menú
+## Crear una nueva presentacion
 
-El menú inicial está separado de la lógica de cada presentación.
+La forma recomendada de dar de alta un deck nuevo es:
 
-- [react/demo/src/App.tsx](C:\apps\instaPresi\react\demo\src\App.tsx) decide si mostrar el menú o una presentación
-- [react/demo/src/components/PresentationMenu.tsx](C:\apps\instaPresi\react\demo\src\components\PresentationMenu.tsx) renderiza la pantalla inicial
-- [react/demo/src/components/PresentationRouter.tsx](C:\apps\instaPresi\react\demo\src\components\PresentationRouter.tsx) resuelve qué deck cargar
-- [react/demo/src/presentations/catalog.ts](C:\apps\instaPresi\react\demo\src\presentations\catalog.ts) contiene la lista configurable de presentaciones
+```bash
+npm run create:ppt
+```
 
-## Cómo agregar una nueva presentación
+El comando pide por consola:
 
-Para sumar una nueva PPT:
+- titulo o nombre de la presentacion
+- fecha
+- autor
+- categorias separadas por coma
 
-1. Crear una carpeta nueva dentro de `react/demo/src/presentations/`
-2. Agregar el componente `Presentation.tsx`
-3. Agregar `styles.css` si la presentación necesita estilos propios
-4. Importarla en `react/demo/src/presentations/catalog.ts`
-5. Registrar su `slug`, `title` y `component`
+Con esos datos el script:
 
-Ejemplo:
+- genera un slug en minusculas, con guiones y sin caracteres especiales
+- valida que no exista ya una carpeta con ese slug
+- crea una carpeta nueva dentro de `react/demo/src/presentations/<slug>/`
+- genera `Presentation.tsx`, `styles.css` y `data.ts`
+- agrega automaticamente la presentacion al catalogo en `react/demo/src/data/presentations.ts` cuando detecta la estructura esperada
+
+Ejemplo de resultado:
 
 ```txt
-react/demo/src/presentations/ppt4/
+react/demo/src/presentations/panel-posventa-camiones-2026/
+  data.ts
   Presentation.tsx
   styles.css
 ```
 
-Ejemplo de registro en el catálogo:
+La plantilla inicial incluye:
 
-```ts
-{
-	slug: 'ppt4',
-	title: 'PPT 4',
-	component: Ppt4Presentation,
-}
-```
+- slide de portada con titulo, autor, fecha y categorias
+- slide de agenda
+- slide de desarrollo con cards placeholder
+- slide de cierre
 
-## Qué mantiene Reveal.js
+Si el slug ya existe, el script muestra error y no sobrescribe archivos.
 
-Aunque la entrada del proyecto ahora está controlada por React, Reveal.js sigue siendo la base de cada presentación y conserva sus capacidades principales, por ejemplo:
+## Catalogo y menu
 
-- navegación entre slides
+El menu inicial esta separado de la logica de cada deck.
+
+- [App.tsx](C:/apps/instaPresi/react/demo/src/App.tsx) decide si mostrar el menu o una presentacion
+- [PresentationMenu.tsx](C:/apps/instaPresi/react/demo/src/components/PresentationMenu.tsx) renderiza la pantalla inicial
+- [PresentationRouter.tsx](C:/apps/instaPresi/react/demo/src/components/PresentationRouter.tsx) resuelve que deck cargar
+- [presentations.ts](C:/apps/instaPresi/react/demo/src/data/presentations.ts) contiene el catalogo de presentaciones
+
+## Alta manual
+
+Si alguna vez necesitas crear un deck sin usar el script, la estructura minima esperada sigue siendo una carpeta propia dentro de `react/demo/src/presentations/` y un registro en `react/demo/src/data/presentations.ts`.
+
+## Que mantiene Reveal.js
+
+Aunque la entrada del proyecto esta controlada por React, Reveal.js sigue siendo la base de cada presentacion y mantiene capacidades como:
+
+- navegacion entre slides
 - controles
 - barra de progreso
 - stacks verticales
 - fragmentos
 - transiciones
-- configuración propia por deck
+- configuracion propia por deck
 
 ## Archivos importantes
 
-- [package.json](C:\apps\instaPresi\package.json): scripts principales del proyecto
-- [react/demo/package.json](C:\apps\instaPresi\react\demo\package.json): app React que sirve como frontend principal
-- [react/demo/src/presentations/catalog.ts](C:\apps\instaPresi\react\demo\src\presentations\catalog.ts): listado de presentaciones
-- [README_PRESENTACIONES.md](C:\apps\instaPresi\README_PRESENTACIONES.md): guía breve centrada en la estructura de presentaciones
+- [package.json](C:/apps/instaPresi/package.json): scripts principales del proyecto
+- [create-ppt.js](C:/apps/instaPresi/scripts/create-ppt.js): generador de nuevas presentaciones
+- [react/demo/package.json](C:/apps/instaPresi/react/demo/package.json): app React principal
+- [presentations.ts](C:/apps/instaPresi/react/demo/src/data/presentations.ts): catalogo de presentaciones
+- [README_PRESENTACIONES.md](C:/apps/instaPresi/README_PRESENTACIONES.md): guia breve centrada en el flujo de decks
 
-## Créditos
+## Creditos
 
-Este proyecto utiliza `reveal.js` como base técnica y respeta su licencia MIT.
+Este proyecto utiliza `reveal.js` como base tecnica y respeta su licencia MIT.
 
 - Proyecto original: [reveal.js](https://github.com/hakimel/reveal.js)
 - Sitio oficial: [revealjs.com](https://revealjs.com/)

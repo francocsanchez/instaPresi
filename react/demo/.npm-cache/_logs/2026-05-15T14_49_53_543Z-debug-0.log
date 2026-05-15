@@ -1,0 +1,532 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Users\fsanchez.NIPPONCARSRL\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.2.3
+2 info using node@v22.22.0
+3 timing npm:load:whichnode Completed in 2ms
+4 timing config:load:defaults Completed in 3ms
+5 timing config:load:file:C:\Users\fsanchez.NIPPONCARSRL\AppData\Roaming\npm\node_modules\npm\npmrc Completed in 4ms
+6 timing config:load:builtin Completed in 4ms
+7 timing config:load:cli Completed in 2ms
+8 timing config:load:env Completed in 1ms
+9 timing config:load:file:C:\apps\instaPresi\react\demo\.npmrc Completed in 0ms
+10 timing config:load:project Completed in 3ms
+11 timing config:load:file:C:\Users\fsanchez.NIPPONCARSRL\.npmrc Completed in 0ms
+12 timing config:load:user Completed in 0ms
+13 timing config:load:file:C:\Users\fsanchez.NIPPONCARSRL\AppData\Roaming\npm\etc\npmrc Completed in 1ms
+14 timing config:load:global Completed in 1ms
+15 timing config:load:setEnvs Completed in 0ms
+16 timing config:load Completed in 14ms
+17 timing npm:load:configload Completed in 14ms
+18 timing config:load:flatten Completed in 2ms
+19 timing npm:load:mkdirpcache Completed in 1ms
+20 timing npm:load:mkdirplogs Completed in 0ms
+21 verbose title npm install chart.js
+22 verbose argv "install" "chart.js" "--cache" ".npm-cache"
+23 timing npm:load:setTitle Completed in 1ms
+24 timing npm:load:display Completed in 0ms
+25 verbose logfile logs-max:10 dir:C:\apps\instaPresi\react\demo\.npm-cache\_logs\2026-05-15T14_49_53_543Z-
+26 verbose logfile C:\apps\instaPresi\react\demo\.npm-cache\_logs\2026-05-15T14_49_53_543Z-debug-0.log
+27 timing npm:load:logFile Completed in 11ms
+28 timing npm:load:timers Completed in 0ms
+29 timing npm:load:configScope Completed in 1ms
+30 timing npm:load Completed in 49ms
+31 timing arborist:ctor Completed in 1ms
+32 silly logfile done cleaning log files
+33 timing idealTree:init Completed in 69ms
+34 timing idealTree:userRequests Completed in 2ms
+35 silly idealTree buildDeps
+36 silly fetch manifest chart.js@*
+37 http fetch GET 200 https://registry.npmjs.org/chart.js 262ms (cache miss)
+38 silly placeDep ROOT chart.js@4.5.1 OK for:  want: *
+39 silly fetch manifest @kurkle/color@^0.3.0
+40 http fetch GET 200 https://registry.npmjs.org/npm 639ms (cache miss)
+41 http fetch GET 200 https://registry.npmjs.org/@kurkle%2fcolor 709ms (cache miss)
+42 timing idealTree:#root Completed in 993ms
+43 silly placeDep ROOT @kurkle/color@0.3.4 OK for: chart.js@4.5.1 want: ^0.3.0
+44 timing idealTree:node_modules/chart.js Completed in 3ms
+45 timing idealTree:node_modules/@kurkle/color Completed in 0ms
+46 timing idealTree:buildDeps Completed in 996ms
+47 timing idealTree:fixDepFlags Completed in 1ms
+48 timing idealTree Completed in 1072ms
+49 timing reify:loadTrees Completed in 1074ms
+50 timing reify:diffTrees Completed in 4ms
+51 silly reify mark retired [ 'C:\\apps\\instaPresi\\react\\demo\\node_modules\\rolldown' ]
+52 silly reify mark retired [ 'C:\\apps\\instaPresi\\react\\demo\\node_modules\\typescript' ]
+53 silly reify mark retired [ 'C:\\apps\\instaPresi\\react\\demo\\node_modules\\vite' ]
+54 silly reify mark retired [
+54 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@rolldown\\binding-win32-x64-msvc'
+54 silly reify ]
+55 silly reify mark retired [
+55 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@rolldown\\pluginutils'
+55 silly reify ]
+56 silly reify mark retired [ 'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@types\\react' ]
+57 silly reify mark retired [
+57 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@types\\react-dom'
+57 silly reify ]
+58 silly reify mark retired [
+58 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@vitejs\\plugin-react'
+58 silly reify ]
+59 silly reify moves {
+59 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\rolldown': 'C:\\apps\\instaPresi\\react\\demo\\node_modules\\.rolldown-p4PvjCdk',
+59 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\typescript': 'C:\\apps\\instaPresi\\react\\demo\\node_modules\\.typescript-tqIDqTkE',
+59 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\vite': 'C:\\apps\\instaPresi\\react\\demo\\node_modules\\.vite-Qhjo5YKq',
+59 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@rolldown\\binding-win32-x64-msvc': 'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@rolldown\\.binding-win32-x64-msvc-zSw6kXKt',
+59 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@rolldown\\pluginutils': 'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@rolldown\\.pluginutils-Rxyb9Css',
+59 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@types\\react': 'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@types\\.react-nU8qooel',
+59 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@types\\react-dom': 'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@types\\.react-dom-3F3Zkusy',
+59 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@vitejs\\plugin-react': 'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@vitejs\\.plugin-react-L4D8SNsa'
+59 silly reify }
+60 timing reify:retireShallow Completed in 13ms
+61 timing reify:createSparse Completed in 17ms
+62 timing reify:loadBundles Completed in 0ms
+63 silly audit bulk request {
+63 silly audit   'reveal.js': [ '6.0.1' ],
+63 silly audit   '@emnapi/core': [ '1.10.0' ],
+63 silly audit   '@emnapi/runtime': [ '1.10.0' ],
+63 silly audit   '@emnapi/wasi-threads': [ '1.2.1' ],
+63 silly audit   '@napi-rs/wasm-runtime': [ '1.1.2' ],
+63 silly audit   '@oxc-project/types': [ '0.122.0' ],
+63 silly audit   '@rolldown/binding-android-arm64': [ '1.0.0-rc.12' ],
+63 silly audit   '@rolldown/binding-darwin-arm64': [ '1.0.0-rc.12' ],
+63 silly audit   '@rolldown/binding-darwin-x64': [ '1.0.0-rc.12' ],
+63 silly audit   '@rolldown/binding-freebsd-x64': [ '1.0.0-rc.12' ],
+63 silly audit   '@rolldown/binding-linux-arm-gnueabihf': [ '1.0.0-rc.12' ],
+63 silly audit   '@rolldown/binding-linux-arm64-gnu': [ '1.0.0-rc.12' ],
+63 silly audit   '@rolldown/binding-linux-arm64-musl': [ '1.0.0-rc.12' ],
+63 silly audit   '@rolldown/binding-linux-ppc64-gnu': [ '1.0.0-rc.12' ],
+63 silly audit   '@rolldown/binding-linux-s390x-gnu': [ '1.0.0-rc.12' ],
+63 silly audit   '@rolldown/binding-linux-x64-gnu': [ '1.0.0-rc.12' ],
+63 silly audit   '@rolldown/binding-linux-x64-musl': [ '1.0.0-rc.12' ],
+63 silly audit   '@rolldown/binding-openharmony-arm64': [ '1.0.0-rc.12' ],
+63 silly audit   '@rolldown/binding-wasm32-wasi': [ '1.0.0-rc.12' ],
+63 silly audit   '@rolldown/binding-win32-arm64-msvc': [ '1.0.0-rc.12' ],
+63 silly audit   '@rolldown/binding-win32-x64-msvc': [ '1.0.0-rc.12' ],
+63 silly audit   '@rolldown/pluginutils': [ '1.0.0-rc.7', '1.0.0-rc.12' ],
+63 silly audit   '@tybys/wasm-util': [ '0.10.1' ],
+63 silly audit   '@types/react': [ '19.2.14' ],
+63 silly audit   '@types/react-dom': [ '19.2.3' ],
+63 silly audit   '@vitejs/plugin-react': [ '6.0.1' ],
+63 silly audit   csstype: [ '3.2.3' ],
+63 silly audit   'detect-libc': [ '2.1.2' ],
+63 silly audit   fdir: [ '6.5.0' ],
+63 silly audit   fsevents: [ '2.3.3' ],
+63 silly audit   lightningcss: [ '1.32.0' ],
+63 silly audit   'lightningcss-android-arm64': [ '1.32.0' ],
+63 silly audit   'lightningcss-darwin-arm64': [ '1.32.0' ],
+63 silly audit   'lightningcss-darwin-x64': [ '1.32.0' ],
+63 silly audit   'lightningcss-freebsd-x64': [ '1.32.0' ],
+63 silly audit   'lightningcss-linux-arm-gnueabihf': [ '1.32.0' ],
+63 silly audit   'lightningcss-linux-arm64-gnu': [ '1.32.0' ],
+63 silly audit   'lightningcss-linux-arm64-musl': [ '1.32.0' ],
+63 silly audit   'lightningcss-linux-x64-gnu': [ '1.32.0' ],
+63 silly audit   'lightningcss-linux-x64-musl': [ '1.32.0' ],
+63 silly audit   'lightningcss-win32-arm64-msvc': [ '1.32.0' ],
+63 silly audit   'lightningcss-win32-x64-msvc': [ '1.32.0' ],
+63 silly audit   nanoid: [ '3.3.11' ],
+63 silly audit   picocolors: [ '1.1.1' ],
+63 silly audit   picomatch: [ '4.0.4' ],
+63 silly audit   postcss: [ '8.5.8' ],
+63 silly audit   react: [ '19.2.6' ],
+63 silly audit   'react-dom': [ '19.2.6' ],
+63 silly audit   rolldown: [ '1.0.0-rc.12' ],
+63 silly audit   scheduler: [ '0.27.0' ],
+63 silly audit   'source-map-js': [ '1.2.1' ],
+63 silly audit   tinyglobby: [ '0.2.15' ],
+63 silly audit   tslib: [ '2.8.1' ],
+63 silly audit   typescript: [ '6.0.2' ],
+63 silly audit   vite: [ '8.0.3' ],
+63 silly audit   'chart.js': [ '4.5.1' ],
+63 silly audit   '@kurkle/color': [ '0.3.4' ]
+63 silly audit }
+64 verbose reify failed optional dependency C:\apps\instaPresi\react\demo\node_modules\lightningcss-win32-arm64-msvc
+65 silly reify mark deleted [
+65 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\lightningcss-win32-arm64-msvc'
+65 silly reify ]
+66 verbose reify failed optional dependency C:\apps\instaPresi\react\demo\node_modules\lightningcss-linux-x64-musl
+67 silly reify mark deleted [
+67 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\lightningcss-linux-x64-musl'
+67 silly reify ]
+68 verbose reify failed optional dependency C:\apps\instaPresi\react\demo\node_modules\lightningcss-linux-x64-gnu
+69 silly reify mark deleted [
+69 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\lightningcss-linux-x64-gnu'
+69 silly reify ]
+70 verbose reify failed optional dependency C:\apps\instaPresi\react\demo\node_modules\lightningcss-linux-arm64-musl
+71 silly reify mark deleted [
+71 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\lightningcss-linux-arm64-musl'
+71 silly reify ]
+72 verbose reify failed optional dependency C:\apps\instaPresi\react\demo\node_modules\lightningcss-linux-arm64-gnu
+73 silly reify mark deleted [
+73 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\lightningcss-linux-arm64-gnu'
+73 silly reify ]
+74 verbose reify failed optional dependency C:\apps\instaPresi\react\demo\node_modules\lightningcss-linux-arm-gnueabihf
+75 silly reify mark deleted [
+75 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\lightningcss-linux-arm-gnueabihf'
+75 silly reify ]
+76 verbose reify failed optional dependency C:\apps\instaPresi\react\demo\node_modules\lightningcss-freebsd-x64
+77 silly reify mark deleted [
+77 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\lightningcss-freebsd-x64'
+77 silly reify ]
+78 verbose reify failed optional dependency C:\apps\instaPresi\react\demo\node_modules\lightningcss-darwin-x64
+79 silly reify mark deleted [
+79 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\lightningcss-darwin-x64'
+79 silly reify ]
+80 verbose reify failed optional dependency C:\apps\instaPresi\react\demo\node_modules\lightningcss-darwin-arm64
+81 silly reify mark deleted [
+81 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\lightningcss-darwin-arm64'
+81 silly reify ]
+82 verbose reify failed optional dependency C:\apps\instaPresi\react\demo\node_modules\lightningcss-android-arm64
+83 silly reify mark deleted [
+83 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\lightningcss-android-arm64'
+83 silly reify ]
+84 verbose reify failed optional dependency C:\apps\instaPresi\react\demo\node_modules\fsevents
+85 silly reify mark deleted [ 'C:\\apps\\instaPresi\\react\\demo\\node_modules\\fsevents' ]
+86 verbose reify failed optional dependency C:\apps\instaPresi\react\demo\node_modules\@rolldown\binding-win32-arm64-msvc
+87 silly reify mark deleted [
+87 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@rolldown\\binding-win32-arm64-msvc'
+87 silly reify ]
+88 verbose reify failed optional dependency C:\apps\instaPresi\react\demo\node_modules\@rolldown\binding-wasm32-wasi
+89 silly reify mark deleted [
+89 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@rolldown\\binding-wasm32-wasi'
+89 silly reify ]
+90 verbose reify failed optional dependency C:\apps\instaPresi\react\demo\node_modules\@napi-rs\wasm-runtime
+91 silly reify mark deleted [
+91 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@napi-rs\\wasm-runtime'
+91 silly reify ]
+92 verbose reify failed optional dependency C:\apps\instaPresi\react\demo\node_modules\@emnapi\core
+93 silly reify mark deleted [ 'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@emnapi\\core' ]
+94 verbose reify failed optional dependency C:\apps\instaPresi\react\demo\node_modules\@emnapi\runtime
+95 silly reify mark deleted [ 'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@emnapi\\runtime' ]
+96 verbose reify failed optional dependency C:\apps\instaPresi\react\demo\node_modules\@tybys\wasm-util
+97 silly reify mark deleted [
+97 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@tybys\\wasm-util'
+97 silly reify ]
+98 verbose reify failed optional dependency C:\apps\instaPresi\react\demo\node_modules\@emnapi\wasi-threads
+99 silly reify mark deleted [
+99 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@emnapi\\wasi-threads'
+99 silly reify ]
+100 verbose reify failed optional dependency C:\apps\instaPresi\react\demo\node_modules\tslib
+101 silly reify mark deleted [ 'C:\\apps\\instaPresi\\react\\demo\\node_modules\\tslib' ]
+102 verbose reify failed optional dependency C:\apps\instaPresi\react\demo\node_modules\@rolldown\binding-openharmony-arm64
+103 silly reify mark deleted [
+103 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@rolldown\\binding-openharmony-arm64'
+103 silly reify ]
+104 verbose reify failed optional dependency C:\apps\instaPresi\react\demo\node_modules\@rolldown\binding-linux-x64-musl
+105 silly reify mark deleted [
+105 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@rolldown\\binding-linux-x64-musl'
+105 silly reify ]
+106 verbose reify failed optional dependency C:\apps\instaPresi\react\demo\node_modules\@rolldown\binding-linux-x64-gnu
+107 silly reify mark deleted [
+107 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@rolldown\\binding-linux-x64-gnu'
+107 silly reify ]
+108 verbose reify failed optional dependency C:\apps\instaPresi\react\demo\node_modules\@rolldown\binding-linux-s390x-gnu
+109 silly reify mark deleted [
+109 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@rolldown\\binding-linux-s390x-gnu'
+109 silly reify ]
+110 verbose reify failed optional dependency C:\apps\instaPresi\react\demo\node_modules\@rolldown\binding-linux-ppc64-gnu
+111 silly reify mark deleted [
+111 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@rolldown\\binding-linux-ppc64-gnu'
+111 silly reify ]
+112 verbose reify failed optional dependency C:\apps\instaPresi\react\demo\node_modules\@rolldown\binding-linux-arm64-musl
+113 silly reify mark deleted [
+113 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@rolldown\\binding-linux-arm64-musl'
+113 silly reify ]
+114 verbose reify failed optional dependency C:\apps\instaPresi\react\demo\node_modules\@rolldown\binding-linux-arm64-gnu
+115 silly reify mark deleted [
+115 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@rolldown\\binding-linux-arm64-gnu'
+115 silly reify ]
+116 verbose reify failed optional dependency C:\apps\instaPresi\react\demo\node_modules\@rolldown\binding-linux-arm-gnueabihf
+117 silly reify mark deleted [
+117 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@rolldown\\binding-linux-arm-gnueabihf'
+117 silly reify ]
+118 verbose reify failed optional dependency C:\apps\instaPresi\react\demo\node_modules\@rolldown\binding-freebsd-x64
+119 silly reify mark deleted [
+119 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@rolldown\\binding-freebsd-x64'
+119 silly reify ]
+120 verbose reify failed optional dependency C:\apps\instaPresi\react\demo\node_modules\@rolldown\binding-darwin-x64
+121 silly reify mark deleted [
+121 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@rolldown\\binding-darwin-x64'
+121 silly reify ]
+122 verbose reify failed optional dependency C:\apps\instaPresi\react\demo\node_modules\@rolldown\binding-darwin-arm64
+123 silly reify mark deleted [
+123 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@rolldown\\binding-darwin-arm64'
+123 silly reify ]
+124 verbose reify failed optional dependency C:\apps\instaPresi\react\demo\node_modules\@rolldown\binding-android-arm64
+125 silly reify mark deleted [
+125 silly reify   'C:\\apps\\instaPresi\\react\\demo\\node_modules\\@rolldown\\binding-android-arm64'
+125 silly reify ]
+126 timing reifyNode:node_modules/lightningcss-win32-arm64-msvc Completed in 15ms
+127 timing reifyNode:node_modules/lightningcss-linux-x64-musl Completed in 15ms
+128 timing reifyNode:node_modules/lightningcss-linux-x64-gnu Completed in 15ms
+129 timing reifyNode:node_modules/lightningcss-linux-arm64-musl Completed in 16ms
+130 timing reifyNode:node_modules/lightningcss-linux-arm64-gnu Completed in 16ms
+131 timing reifyNode:node_modules/lightningcss-linux-arm-gnueabihf Completed in 16ms
+132 timing reifyNode:node_modules/lightningcss-freebsd-x64 Completed in 16ms
+133 timing reifyNode:node_modules/lightningcss-darwin-x64 Completed in 16ms
+134 timing reifyNode:node_modules/lightningcss-darwin-arm64 Completed in 15ms
+135 timing reifyNode:node_modules/lightningcss-android-arm64 Completed in 16ms
+136 timing reifyNode:node_modules/fsevents Completed in 16ms
+137 timing reifyNode:node_modules/@rolldown/binding-win32-arm64-msvc Completed in 16ms
+138 timing reifyNode:node_modules/@rolldown/binding-wasm32-wasi Completed in 16ms
+139 timing reifyNode:node_modules/@rolldown/binding-openharmony-arm64 Completed in 16ms
+140 timing reifyNode:node_modules/@rolldown/binding-linux-x64-musl Completed in 16ms
+141 timing reifyNode:node_modules/@rolldown/binding-linux-x64-gnu Completed in 16ms
+142 timing reifyNode:node_modules/@rolldown/binding-linux-s390x-gnu Completed in 16ms
+143 timing reifyNode:node_modules/@rolldown/binding-linux-ppc64-gnu Completed in 16ms
+144 timing reifyNode:node_modules/@rolldown/binding-linux-arm64-musl Completed in 16ms
+145 timing reifyNode:node_modules/@rolldown/binding-linux-arm64-gnu Completed in 16ms
+146 timing reifyNode:node_modules/@rolldown/binding-linux-arm-gnueabihf Completed in 16ms
+147 timing reifyNode:node_modules/@rolldown/binding-freebsd-x64 Completed in 16ms
+148 timing reifyNode:node_modules/@rolldown/binding-darwin-x64 Completed in 16ms
+149 timing reifyNode:node_modules/@rolldown/binding-darwin-arm64 Completed in 16ms
+150 timing reifyNode:node_modules/@rolldown/binding-android-arm64 Completed in 15ms
+151 timing reifyNode:node_modules/reveal.js Completed in 31ms
+152 silly tarball no local data for @kurkle/color@https://registry.npmjs.org/@kurkle/color/-/color-0.3.4.tgz. Extracting by manifest.
+153 silly tarball no local data for chart.js@https://registry.npmjs.org/chart.js/-/chart.js-4.5.1.tgz. Extracting by manifest.
+154 silly tarball no local data for tslib@https://registry.npmjs.org/tslib/-/tslib-2.8.1.tgz. Extracting by manifest.
+155 silly tarball no local data for tinyglobby@https://registry.npmjs.org/tinyglobby/-/tinyglobby-0.2.15.tgz. Extracting by manifest.
+156 silly tarball no local data for source-map-js@https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.1.tgz. Extracting by manifest.
+157 silly tarball no local data for scheduler@https://registry.npmjs.org/scheduler/-/scheduler-0.27.0.tgz. Extracting by manifest.
+158 silly tarball no local data for react-dom@https://registry.npmjs.org/react-dom/-/react-dom-19.2.6.tgz. Extracting by manifest.
+159 silly tarball no local data for react@https://registry.npmjs.org/react/-/react-19.2.6.tgz. Extracting by manifest.
+160 silly tarball no local data for postcss@https://registry.npmjs.org/postcss/-/postcss-8.5.8.tgz. Extracting by manifest.
+161 silly tarball no local data for picocolors@https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz. Extracting by manifest.
+162 silly tarball no local data for picomatch@https://registry.npmjs.org/picomatch/-/picomatch-4.0.4.tgz. Extracting by manifest.
+163 silly tarball no local data for nanoid@https://registry.npmjs.org/nanoid/-/nanoid-3.3.11.tgz. Extracting by manifest.
+164 silly tarball no local data for lightningcss-win32-x64-msvc@https://registry.npmjs.org/lightningcss-win32-x64-msvc/-/lightningcss-win32-x64-msvc-1.32.0.tgz. Extracting by manifest.
+165 silly tarball no local data for lightningcss@https://registry.npmjs.org/lightningcss/-/lightningcss-1.32.0.tgz. Extracting by manifest.
+166 silly tarball no local data for detect-libc@https://registry.npmjs.org/detect-libc/-/detect-libc-2.1.2.tgz. Extracting by manifest.
+167 silly tarball no local data for fdir@https://registry.npmjs.org/fdir/-/fdir-6.5.0.tgz. Extracting by manifest.
+168 silly tarball no local data for csstype@https://registry.npmjs.org/csstype/-/csstype-3.2.3.tgz. Extracting by manifest.
+169 silly tarball no local data for @oxc-project/types@https://registry.npmjs.org/@oxc-project/types/-/types-0.122.0.tgz. Extracting by manifest.
+170 silly tarball no local data for @tybys/wasm-util@https://registry.npmjs.org/@tybys/wasm-util/-/wasm-util-0.10.1.tgz. Extracting by manifest.
+171 silly tarball no local data for @napi-rs/wasm-runtime@https://registry.npmjs.org/@napi-rs/wasm-runtime/-/wasm-runtime-1.1.2.tgz. Extracting by manifest.
+172 silly tarball no local data for @emnapi/wasi-threads@https://registry.npmjs.org/@emnapi/wasi-threads/-/wasi-threads-1.2.1.tgz. Extracting by manifest.
+173 silly tarball no local data for @emnapi/runtime@https://registry.npmjs.org/@emnapi/runtime/-/runtime-1.10.0.tgz. Extracting by manifest.
+174 silly tarball no local data for @emnapi/core@https://registry.npmjs.org/@emnapi/core/-/core-1.10.0.tgz. Extracting by manifest.
+175 silly tarball no local data for @vitejs/plugin-react@https://registry.npmjs.org/@vitejs/plugin-react/-/plugin-react-6.0.1.tgz. Extracting by manifest.
+176 silly tarball no local data for @types/react-dom@https://registry.npmjs.org/@types/react-dom/-/react-dom-19.2.3.tgz. Extracting by manifest.
+177 silly tarball no local data for @types/react@https://registry.npmjs.org/@types/react/-/react-19.2.14.tgz. Extracting by manifest.
+178 silly tarball no local data for @rolldown/pluginutils@https://registry.npmjs.org/@rolldown/pluginutils/-/pluginutils-1.0.0-rc.7.tgz. Extracting by manifest.
+179 silly tarball no local data for @rolldown/binding-win32-x64-msvc@https://registry.npmjs.org/@rolldown/binding-win32-x64-msvc/-/binding-win32-x64-msvc-1.0.0-rc.12.tgz. Extracting by manifest.
+180 silly tarball no local data for vite@https://registry.npmjs.org/vite/-/vite-8.0.3.tgz. Extracting by manifest.
+181 silly tarball no local data for typescript@https://registry.npmjs.org/typescript/-/typescript-6.0.2.tgz. Extracting by manifest.
+182 silly tarball no local data for rolldown@https://registry.npmjs.org/rolldown/-/rolldown-1.0.0-rc.12.tgz. Extracting by manifest.
+183 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 332ms
+184 timing auditReport:getReport Completed in 334ms
+185 silly audit report {
+185 silly audit report   postcss: [
+185 silly audit report     {
+185 silly audit report       id: 1117015,
+185 silly audit report       url: 'https://github.com/advisories/GHSA-qx2v-qp2m-jg93',
+185 silly audit report       title: 'PostCSS has XSS via Unescaped </style> in its CSS Stringify Output',
+185 silly audit report       severity: 'moderate',
+185 silly audit report       vulnerable_versions: '<8.5.10',
+185 silly audit report       cwe: [Array],
+185 silly audit report       cvss: [Object]
+185 silly audit report     }
+185 silly audit report   ],
+185 silly audit report   vite: [
+185 silly audit report     {
+185 silly audit report       id: 1116231,
+185 silly audit report       url: 'https://github.com/advisories/GHSA-4w7w-66w2-5vf9',
+185 silly audit report       title: 'Vite Vulnerable to Path Traversal in Optimized Deps `.map` Handling',
+185 silly audit report       severity: 'moderate',
+185 silly audit report       vulnerable_versions: '>=8.0.0 <=8.0.4',
+185 silly audit report       cwe: [Array],
+185 silly audit report       cvss: [Object]
+185 silly audit report     },
+185 silly audit report     {
+185 silly audit report       id: 1116233,
+185 silly audit report       url: 'https://github.com/advisories/GHSA-v2wj-q39q-566r',
+185 silly audit report       title: 'Vite: `server.fs.deny` bypassed with queries',
+185 silly audit report       severity: 'high',
+185 silly audit report       vulnerable_versions: '>=8.0.0 <=8.0.4',
+185 silly audit report       cwe: [Array],
+185 silly audit report       cvss: [Object]
+185 silly audit report     },
+185 silly audit report     {
+185 silly audit report       id: 1116236,
+185 silly audit report       url: 'https://github.com/advisories/GHSA-p9ff-h696-f583',
+185 silly audit report       title: 'Vite Vulnerable to Arbitrary File Read via Vite Dev Server WebSocket',
+185 silly audit report       severity: 'high',
+185 silly audit report       vulnerable_versions: '>=8.0.0 <=8.0.4',
+185 silly audit report       cwe: [Array],
+185 silly audit report       cvss: [Object]
+185 silly audit report     }
+185 silly audit report   ]
+185 silly audit report }
+186 timing metavuln:cache:get:security-advisory:postcss:685RVq5xScaqegAXk2BRJrsMaZmsz1d/volUoA67iVw3AvHhUlX03u+VPRrmo8iuObcSDvuZF+fuiOnLC9L1uA== Completed in 17ms
+187 timing metavuln:cache:get:security-advisory:vite:4XUMUtU4wyKMhgaqDs2Hp0cJJM6636/8P9Eb9hVwRPEo6JnYPLOQSY36rgSGM13T+XP0kNzVapgKJfoQeKiZrQ== Completed in 16ms
+188 timing metavuln:cache:get:security-advisory:vite:NeQ0v7RHtjbapd/yi4pSCJKImP72n18AvSplKsvN5O7STklhNIJsimXrdT8wxpQ3ixTmPN0WyzyN5JFq3J0DDw== Completed in 15ms
+189 timing metavuln:cache:get:security-advisory:vite:fvv/1D7k5nXfS8BBUOCWEhvQoYZoR754JB7acdJuILF5T+bOhgGIndhfhcuvSo3IVc6OhWHbU3kQLoUqJ/6dXw== Completed in 15ms
+190 http fetch GET 200 https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz 819ms (cache miss)
+191 timing reifyNode:node_modules/picocolors Completed in 881ms
+192 http fetch GET 200 https://registry.npmjs.org/tinyglobby/-/tinyglobby-0.2.15.tgz 878ms (cache miss)
+193 timing reifyNode:node_modules/tinyglobby Completed in 943ms
+194 http fetch GET 200 https://registry.npmjs.org/fdir/-/fdir-6.5.0.tgz 937ms (cache miss)
+195 http fetch GET 200 https://registry.npmjs.org/detect-libc/-/detect-libc-2.1.2.tgz 948ms (cache miss)
+196 timing reifyNode:node_modules/fdir Completed in 1014ms
+197 timing reifyNode:node_modules/detect-libc Completed in 1044ms
+198 http fetch GET 200 https://registry.npmjs.org/@kurkle/color/-/color-0.3.4.tgz 1059ms (cache miss)
+199 timing reifyNode:node_modules/@kurkle/color Completed in 1092ms
+200 http fetch GET 200 https://registry.npmjs.org/@oxc-project/types/-/types-0.122.0.tgz 1264ms (cache miss)
+201 timing reifyNode:node_modules/@oxc-project/types Completed in 1307ms
+202 http fetch GET 200 https://registry.npmjs.org/scheduler/-/scheduler-0.27.0.tgz 1339ms (cache miss)
+203 http fetch GET 200 https://registry.npmjs.org/@vitejs/plugin-react/-/plugin-react-6.0.1.tgz 1337ms (cache miss)
+204 timing reifyNode:node_modules/@vitejs/plugin-react Completed in 1385ms
+205 http fetch GET 200 https://registry.npmjs.org/postcss 1061ms (cache miss)
+206 timing metavuln:packument:postcss Completed in 1066ms
+207 timing metavuln:load:security-advisory:postcss:1117015 Completed in 15ms
+208 timing reifyNode:node_modules/scheduler Completed in 1422ms
+209 http fetch GET 200 https://registry.npmjs.org/picomatch/-/picomatch-4.0.4.tgz 1400ms (cache miss)
+210 timing reifyNode:node_modules/picomatch Completed in 1438ms
+211 http fetch GET 200 https://registry.npmjs.org/tslib/-/tslib-2.8.1.tgz 1408ms (cache miss)
+212 timing reifyNode:node_modules/tslib Completed in 1457ms
+213 http fetch GET 200 https://registry.npmjs.org/@types/react-dom/-/react-dom-19.2.3.tgz 1454ms (cache miss)
+214 timing reifyNode:node_modules/@types/react-dom Completed in 1524ms
+215 timing metavuln:cache:put:security-advisory:postcss:685RVq5xScaqegAXk2BRJrsMaZmsz1d/volUoA67iVw3AvHhUlX03u+VPRrmo8iuObcSDvuZF+fuiOnLC9L1uA== Completed in 125ms
+216 timing metavuln:calculate:security-advisory:postcss:1117015 Completed in 1207ms
+217 http fetch GET 200 https://registry.npmjs.org/@rolldown/pluginutils/-/pluginutils-1.0.0-rc.7.tgz 1504ms (cache miss)
+218 timing reifyNode:node_modules/@rolldown/pluginutils Completed in 1577ms
+219 http fetch GET 200 https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.1.tgz 1573ms (cache miss)
+220 timing reifyNode:node_modules/source-map-js Completed in 1609ms
+221 http fetch GET 200 https://registry.npmjs.org/nanoid/-/nanoid-3.3.11.tgz 1604ms (cache miss)
+222 timing reifyNode:node_modules/nanoid Completed in 1668ms
+223 http fetch GET 200 https://registry.npmjs.org/@emnapi/wasi-threads/-/wasi-threads-1.2.1.tgz 1642ms (cache miss)
+224 timing reifyNode:node_modules/@emnapi/wasi-threads Completed in 1705ms
+225 http fetch GET 200 https://registry.npmjs.org/lightningcss/-/lightningcss-1.32.0.tgz 1768ms (cache miss)
+226 timing reifyNode:node_modules/lightningcss Completed in 1811ms
+227 http fetch GET 200 https://registry.npmjs.org/react/-/react-19.2.6.tgz 1804ms (cache miss)
+228 timing reifyNode:node_modules/react Completed in 1841ms
+229 http fetch GET 200 https://registry.npmjs.org/@types/react/-/react-19.2.14.tgz 1790ms (cache miss)
+230 timing reifyNode:node_modules/@types/react Completed in 1839ms
+231 http fetch GET 200 https://registry.npmjs.org/csstype/-/csstype-3.2.3.tgz 1802ms (cache miss)
+232 timing reifyNode:node_modules/csstype Completed in 1846ms
+233 http fetch GET 200 https://registry.npmjs.org/@emnapi/runtime/-/runtime-1.10.0.tgz 1835ms (cache miss)
+234 timing reifyNode:node_modules/@emnapi/runtime Completed in 1887ms
+235 http fetch GET 200 https://registry.npmjs.org/vite 1745ms (cache miss)
+236 timing metavuln:packument:vite Completed in 1793ms
+237 timing metavuln:load:security-advisory:vite:1116231 Completed in 42ms
+238 timing metavuln:load:security-advisory:vite:1116233 Completed in 17ms
+239 timing metavuln:load:security-advisory:vite:1116236 Completed in 17ms
+240 timing metavuln:cache:put:security-advisory:vite:4XUMUtU4wyKMhgaqDs2Hp0cJJM6636/8P9Eb9hVwRPEo6JnYPLOQSY36rgSGM13T+XP0kNzVapgKJfoQeKiZrQ== Completed in 184ms
+241 timing metavuln:calculate:security-advisory:vite:1116231 Completed in 2021ms
+242 timing metavuln:cache:put:security-advisory:vite:NeQ0v7RHtjbapd/yi4pSCJKImP72n18AvSplKsvN5O7STklhNIJsimXrdT8wxpQ3ixTmPN0WyzyN5JFq3J0DDw== Completed in 169ms
+243 timing metavuln:calculate:security-advisory:vite:1116233 Completed in 2022ms
+244 timing metavuln:cache:put:security-advisory:vite:fvv/1D7k5nXfS8BBUOCWEhvQoYZoR754JB7acdJuILF5T+bOhgGIndhfhcuvSo3IVc6OhWHbU3kQLoUqJ/6dXw== Completed in 151ms
+245 timing metavuln:calculate:security-advisory:vite:1116236 Completed in 2022ms
+246 timing metavuln:cache:get:security-advisory:vite:anAQVIv9ku7SlSaOcqOIP5rn3R+PQqZRf2y4CHP3RuDjlGzMadSoRFi0ZZoT4by8hMtVpmy7xPCXBY2D5grCIA== Completed in 1ms
+247 timing metavuln:load:security-advisory:vite:685RVq5xScaqegAXk2BRJrsMaZmsz1d/volUoA67iVw3AvHhUlX03u+VPRrmo8iuObcSDvuZF+fuiOnLC9L1uA== Completed in 98ms
+248 http fetch GET 200 https://registry.npmjs.org/postcss/-/postcss-8.5.8.tgz 2448ms (cache miss)
+249 timing reifyNode:node_modules/postcss Completed in 2490ms
+250 timing metavuln:cache:put:security-advisory:vite:anAQVIv9ku7SlSaOcqOIP5rn3R+PQqZRf2y4CHP3RuDjlGzMadSoRFi0ZZoT4by8hMtVpmy7xPCXBY2D5grCIA== Completed in 40ms
+251 timing metavuln:calculate:security-advisory:vite:685RVq5xScaqegAXk2BRJrsMaZmsz1d/volUoA67iVw3AvHhUlX03u+VPRrmo8iuObcSDvuZF+fuiOnLC9L1uA== Completed in 139ms
+252 timing metavuln:cache:get:security-advisory:@vitejs/plugin-react:G9Ntk7g16IZmVy50oO9qCYc1k0QWLxVkSy6vYGOtOQpuB4/GSx4testIOKPubcmvgKxGd25LD6PgD6MfVRTVYg== Completed in 6ms
+253 http fetch GET 200 https://registry.npmjs.org/@emnapi/core/-/core-1.10.0.tgz 2482ms (cache miss)
+254 timing reifyNode:node_modules/@emnapi/core Completed in 2531ms
+255 http fetch GET 200 https://registry.npmjs.org/rolldown/-/rolldown-1.0.0-rc.12.tgz 2500ms (cache miss)
+256 timing reifyNode:node_modules/rolldown Completed in 2562ms
+257 http fetch GET 200 https://registry.npmjs.org/@tybys/wasm-util/-/wasm-util-0.10.1.tgz 2522ms (cache miss)
+258 timing reifyNode:node_modules/@tybys/wasm-util Completed in 2567ms
+259 http fetch GET 200 https://registry.npmjs.org/vite/-/vite-8.0.3.tgz 2602ms (cache miss)
+260 timing reifyNode:node_modules/vite Completed in 2655ms
+261 http fetch GET 200 https://registry.npmjs.org/@napi-rs/wasm-runtime/-/wasm-runtime-1.1.2.tgz 2665ms (cache miss)
+262 timing reifyNode:node_modules/@napi-rs/wasm-runtime Completed in 2713ms
+263 http fetch GET 200 https://registry.npmjs.org/lightningcss-win32-x64-msvc/-/lightningcss-win32-x64-msvc-1.32.0.tgz 2828ms (cache miss)
+264 timing reifyNode:node_modules/lightningcss-win32-x64-msvc Completed in 2871ms
+265 http fetch GET 200 https://registry.npmjs.org/react-dom/-/react-dom-19.2.6.tgz 3007ms (cache miss)
+266 timing reifyNode:node_modules/react-dom Completed in 3048ms
+267 http fetch GET 200 https://registry.npmjs.org/@vitejs%2fplugin-react 564ms (cache miss)
+268 timing metavuln:packument:@vitejs/plugin-react Completed in 568ms
+269 timing metavuln:load:security-advisory:@vitejs/plugin-react:4XUMUtU4wyKMhgaqDs2Hp0cJJM6636/8P9Eb9hVwRPEo6JnYPLOQSY36rgSGM13T+XP0kNzVapgKJfoQeKiZrQ== Completed in 52ms
+270 timing metavuln:cache:put:security-advisory:@vitejs/plugin-react:G9Ntk7g16IZmVy50oO9qCYc1k0QWLxVkSy6vYGOtOQpuB4/GSx4testIOKPubcmvgKxGd25LD6PgD6MfVRTVYg== Completed in 27ms
+271 timing metavuln:calculate:security-advisory:@vitejs/plugin-react:4XUMUtU4wyKMhgaqDs2Hp0cJJM6636/8P9Eb9hVwRPEo6JnYPLOQSY36rgSGM13T+XP0kNzVapgKJfoQeKiZrQ== Completed in 647ms
+272 timing auditReport:init Completed in 2811ms
+273 timing reify:audit Completed in 3146ms
+274 http fetch GET 200 https://registry.npmjs.org/chart.js/-/chart.js-4.5.1.tgz 3172ms (cache miss)
+275 timing reifyNode:node_modules/chart.js Completed in 3205ms
+276 http fetch GET 200 https://registry.npmjs.org/typescript/-/typescript-6.0.2.tgz 3625ms (cache miss)
+277 timing reifyNode:node_modules/typescript Completed in 3686ms
+278 http fetch GET 200 https://registry.npmjs.org/@rolldown/binding-win32-x64-msvc/-/binding-win32-x64-msvc-1.0.0-rc.12.tgz 5083ms (cache miss)
+279 timing reifyNode:node_modules/@rolldown/binding-win32-x64-msvc Completed in 5134ms
+280 timing reify:unpack Completed in 5139ms
+281 timing reify:unretire Completed in 23ms
+282 timing build:queue Completed in 54ms
+283 timing build:link:node_modules/nanoid Completed in 33ms
+284 timing build:link:node_modules/rolldown Completed in 31ms
+285 timing build:link:node_modules/typescript Completed in 29ms
+286 timing build:link:node_modules/vite Completed in 29ms
+287 timing build:link Completed in 34ms
+288 timing build:deps Completed in 91ms
+289 timing build:queue Completed in 0ms
+290 timing build:links Completed in 0ms
+291 timing build Completed in 93ms
+292 timing reify:build Completed in 94ms
+293 timing reify:trash Completed in 29ms
+294 timing reify:save Completed in 50ms
+295 timing reify Completed in 6552ms
+296 silly ADD node_modules/@kurkle/color
+297 silly ADD node_modules/chart.js
+298 silly ADD node_modules/reveal.js
+299 silly ADD
+300 silly ADD node_modules/tinyglobby
+301 silly ADD node_modules/source-map-js
+302 silly ADD node_modules/scheduler
+303 silly ADD node_modules/react-dom
+304 silly ADD node_modules/react
+305 silly ADD node_modules/postcss
+306 silly ADD node_modules/picomatch
+307 silly ADD node_modules/picocolors
+308 silly ADD node_modules/nanoid
+309 silly ADD node_modules/lightningcss-win32-x64-msvc
+310 silly ADD
+311 silly ADD
+312 silly ADD
+313 silly ADD
+314 silly ADD
+315 silly ADD
+316 silly ADD
+317 silly ADD
+318 silly ADD
+319 silly ADD
+320 silly ADD node_modules/lightningcss
+321 silly ADD
+322 silly ADD node_modules/fdir
+323 silly ADD node_modules/detect-libc
+324 silly ADD node_modules/csstype
+325 silly ADD
+326 silly ADD
+327 silly ADD
+328 silly ADD
+329 silly ADD
+330 silly ADD
+331 silly ADD
+332 silly ADD
+333 silly ADD
+334 silly ADD
+335 silly ADD
+336 silly ADD
+337 silly ADD
+338 silly ADD
+339 silly ADD
+340 silly ADD node_modules/@oxc-project/types
+341 silly ADD
+342 silly ADD
+343 silly ADD
+344 silly ADD
+345 silly CHANGE node_modules/@vitejs/plugin-react
+346 silly CHANGE node_modules/@types/react-dom
+347 silly CHANGE node_modules/@types/react
+348 silly CHANGE node_modules/@rolldown/pluginutils
+349 silly CHANGE node_modules/@rolldown/binding-win32-x64-msvc
+350 silly CHANGE node_modules/vite
+351 silly CHANGE node_modules/typescript
+352 silly CHANGE node_modules/rolldown
+353 timing command:install Completed in 6580ms
+354 notice
+354 notice New major version of npm available! 10.2.3 -> 11.14.1
+354 notice Changelog: <https://github.com/npm/cli/releases/tag/v11.14.1>
+354 notice Run `npm install -g npm@11.14.1` to update!
+354 notice
+355 verbose exit 0
+356 timing npm Completed in 8323ms
+357 info ok

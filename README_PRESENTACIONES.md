@@ -6,12 +6,8 @@ Este proyecto mantiene `reveal.js` como motor de presentacion y usa `@revealjs/r
 
 - La ruta `/` muestra un menu inicial con las presentaciones disponibles.
 - Cada deck vive dentro de `react/demo/src/presentations/<slug>/`.
-- El archivo `react/demo/src/presentations/catalog.ts` define que presentaciones se muestran en el menu.
-- Las rutas activas quedan asi:
-  - `/`
-  - `/presentations/ppt1`
-  - `/presentations/ppt2`
-  - `/presentations/ppt3`
+- El archivo `react/demo/src/data/presentations.ts` define que presentaciones se muestran en el menu.
+- La forma recomendada de crear una nueva presentacion es `npm run create:ppt`.
 
 ## Estructura recomendada
 
@@ -20,8 +16,9 @@ react/demo/src/
   components/
     PresentationMenu.tsx
     PresentationRouter.tsx
+  data/
+    presentations.ts
   presentations/
-    catalog.ts
     ppt1/
       Presentation.tsx
       styles.css
@@ -37,25 +34,60 @@ react/demo/src/
 
 ## Como agregar una nueva presentacion
 
-1. Crear una carpeta nueva dentro de `react/demo/src/presentations/`.
-2. Agregar su `Presentation.tsx` y, si hace falta, un `styles.css`.
-3. Importarla en `react/demo/src/presentations/catalog.ts`.
-4. Registrar su `slug` y `title` dentro del arreglo `presentations`.
+La opcion recomendada es ejecutar:
+
+```bash
+npm run create:ppt
+```
+
+El comando pide:
+
+- titulo
+- fecha
+- autor
+- categorias separadas por coma
+
+Y genera automaticamente:
+
+1. una carpeta nueva dentro de `react/demo/src/presentations/`
+2. el archivo `Presentation.tsx`
+3. el archivo `styles.css`
+4. el archivo `data.ts`
+5. el registro en `react/demo/src/data/presentations.ts`
 
 Ejemplo de carpeta:
 
 ```txt
 react/demo/src/presentations/ppt4/
+  data.ts
   Presentation.tsx
   styles.css
 ```
+
+La plantilla inicial deja lista:
+
+- portada con titulo, autor, fecha y categorias
+- slide de agenda
+- slide de contenido con placeholders
+- slide de cierre
+
+Si ya existe una carpeta con el mismo slug, el script aborta y no sobrescribe nada.
+
+## Alta manual
+
+Si no quieres usar el script, todavia puedes:
+
+1. crear la carpeta dentro de `react/demo/src/presentations/`
+2. agregar `Presentation.tsx` y los archivos auxiliares que necesites
+3. importar el componente en `react/demo/src/data/presentations.ts`
+4. registrar la metadata dentro del arreglo `presentations`
 
 ## Verificacion
 
 Para validar que todo siga funcionando:
 
 ```bash
-npm run --prefix react/demo build
+npm run build
 ```
 
 Para comprobarlo manualmente, levanta la app con `npm run dev` y abre `http://localhost:5173/`.
