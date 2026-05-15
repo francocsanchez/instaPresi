@@ -13,6 +13,11 @@
 		"isolatedModules": true,
 		"noEmit": true,
 		"jsx": "react-jsx",
+		"ignoreDeprecations": "6.0",
+		"baseUrl": ".",
+		"paths": {
+			"reveal.js": ["./js/reveal.d.ts"]
+		},
 
 		/* Linting */
 		"strict": true,
