@@ -317,6 +317,7 @@ async function main() {
 		const id = generatePresentationId(collectExistingIds(catalogContent));
 		const classPrefix = `ppt-${slug}`;
 
+		await mkdir(presentationsDir, { recursive: true });
 		await mkdir(presentationDir, { recursive: false });
 		await writeFile(
 			path.join(presentationDir, 'Presentation.tsx'),
