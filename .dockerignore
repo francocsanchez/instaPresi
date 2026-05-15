@@ -1,0 +1,13 @@
+.git
+.github
+node_modules
+react/demo/node_modules
+dist
+react/demo/dist
+logs
+tmp
+.env
+.env.*
+!.env.example
+tmp-chrome-*.err
+tmp-dom-*.html

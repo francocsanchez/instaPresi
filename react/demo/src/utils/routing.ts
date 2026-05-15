@@ -1,6 +1,6 @@
 export type Route =
 	| { kind: 'home' }
-	| { kind: 'presentation'; slug: string }
+	| { kind: 'presentation'; path: string }
 	| { kind: 'not-found' };
 
 export function normalizePath(pathname: string) {
@@ -17,7 +17,7 @@ export function getRoute(pathname: string): Route {
 
 	const match = normalizedPath.match(/^\/presentations\/([^/]+)$/);
 	if (match) {
-		return { kind: 'presentation', slug: match[1] };
+		return { kind: 'presentation', path: normalizedPath };
 	}
 
 	return { kind: 'not-found' };
@@ -28,8 +28,8 @@ function navigate(pathname: string) {
 	window.dispatchEvent(new PopStateEvent('popstate'));
 }
 
-export function navigateToPresentation(slug: string) {
-	navigate(`/presentations/${slug}`);
+export function navigateToPresentation(path: string) {
+	navigate(path);
 }
 
 export function goHome() {

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import PresentationMenu from './components/PresentationMenu';
 import PresentationRouter from './components/PresentationRouter';
-import { presentations } from './presentations/catalog';
+import { presentations } from './data/presentations';
 import { getRoute } from './utils/routing';
 
 function App() {

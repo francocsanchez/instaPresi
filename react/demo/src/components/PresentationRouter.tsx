@@ -1,4 +1,4 @@
-import type { PresentationDefinition } from '../presentations/catalog';
+import type { PresentationDefinition } from '../types/presentations';
 import { goHome, type Route } from '../utils/routing';
 
 type PresentationRouterProps = {
@@ -9,7 +9,7 @@ type PresentationRouterProps = {
 function PresentationRouter({ route, presentations }: PresentationRouterProps) {
 	if (route.kind === 'presentation') {
 		const selectedPresentation = presentations.find(
-			(presentation) => presentation.slug === route.slug
+			(presentation) => presentation.path === route.path
 		);
 
 		if (selectedPresentation) {

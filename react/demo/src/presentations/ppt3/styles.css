@@ -1,6 +1,7 @@
 .reveal .slides section.ppt3-cover,
 .reveal .slides section.ppt3-detail {
-	padding: 2rem;
+	padding: 2.4rem;
+	color: #f4f4f4;
 }
 
 .reveal .slides section.ppt3-cover {
@@ -11,9 +12,26 @@
 	background: linear-gradient(180deg, #262626 0%, #101010 100%);
 }
 
+.reveal .slides section.ppt3-cover h1,
+.reveal .slides section.ppt3-detail h2 {
+	margin-bottom: 0.7rem;
+	letter-spacing: -0.04em;
+	color: #ffffff;
+}
+
+.reveal .slides section.ppt3-cover p,
+.reveal .slides section.ppt3-detail p {
+	max-width: 820px;
+	margin: 1rem auto 0;
+	font-size: 0.78em;
+	line-height: 1.55;
+	color: #d2d2d2;
+}
+
 .reveal .slides .ppt3-kicker {
 	margin-bottom: 1rem;
 	font-size: 0.52em;
+	font-weight: 600;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
 	color: #b5b5b5;

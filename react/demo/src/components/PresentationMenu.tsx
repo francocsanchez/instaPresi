@@ -1,5 +1,5 @@
-import type { PresentationDefinition } from '../presentations/catalog';
-import { navigateToPresentation } from '../utils/routing';
+import type { PresentationDefinition } from '../types/presentations';
+import PresentationCard from './PresentationCard';
 import './menu.css';
 
 type PresentationMenuProps = {
@@ -14,23 +14,13 @@ function PresentationMenu({ presentations }: PresentationMenuProps) {
 				<h1 id="presentations-title">Selecciona una presentacion</h1>
 				<p className="menu-description">
 					Elige una opcion para abrir su deck en Reveal.js. Para agregar nuevas, suma una
-					carpeta dentro de <code>src/presentations</code> y registrala en el catalogo.
+					carpeta dentro de <code>src/presentations</code> y registrala en
+					<code>src/data/presentations.ts</code>.
 				</p>
 
 				<ul className="menu-list">
 					{presentations.map((presentation) => (
-						<li key={presentation.slug}>
-							<button
-								type="button"
-								className="menu-card"
-								onClick={() => navigateToPresentation(presentation.slug)}
-							>
-								<span className="menu-card-title">{presentation.title}</span>
-								<span className="menu-card-path">
-									{`/presentations/${presentation.slug}`}
-								</span>
-							</button>
-						</li>
+						<PresentationCard key={presentation.id} presentation={presentation} />
 					))}
 				</ul>
 			</section>
