@@ -18,11 +18,24 @@ function PresentationMenu({ presentations }: PresentationMenuProps) {
 					<code>src/data/presentations.ts</code>.
 				</p>
 
-				<ul className="menu-list">
-					{presentations.map((presentation) => (
-						<PresentationCard key={presentation.id} presentation={presentation} />
-					))}
-				</ul>
+				<div className="menu-table-wrap">
+					<table className="menu-table">
+						<thead>
+							<tr>
+								<th scope="col">Presentacion</th>
+								<th scope="col">Autor</th>
+								<th scope="col">Fecha</th>
+								<th scope="col">Categorias</th>
+								<th scope="col" aria-label="Accion" />
+							</tr>
+						</thead>
+						<tbody>
+							{presentations.map((presentation) => (
+								<PresentationCard key={presentation.id} presentation={presentation} />
+							))}
+						</tbody>
+					</table>
+				</div>
 			</section>
 		</main>
 	);

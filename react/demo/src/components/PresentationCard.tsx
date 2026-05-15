@@ -7,21 +7,32 @@ type PresentationCardProps = {
 
 function PresentationCard({ presentation }: PresentationCardProps) {
 	return (
-		<li>
-			<button
-				type="button"
-				className="menu-card"
-				onClick={() => navigateToPresentation(presentation.path)}
-			>
-				<span className="menu-card-title">{presentation.title}</span>
-				<span className="menu-card-meta">{`Autor: ${presentation.author}`}</span>
-				<span className="menu-card-meta">{`Fecha: ${presentation.date}`}</span>
-				<span className="menu-card-meta">
-					{`Categorias: ${presentation.categories.join(', ')}`}
-				</span>
-				<span className="menu-card-path">{presentation.path}</span>
-			</button>
-		</li>
+		<tr className="menu-row">
+			<td className="menu-cell menu-cell-title">
+				<div className="menu-title-block">
+					<span className="menu-title">{presentation.title}</span>
+					<span className="menu-path">{presentation.path}</span>
+				</div>
+			</td>
+			<td className="menu-cell" data-label="Autor">
+				{presentation.author}
+			</td>
+			<td className="menu-cell" data-label="Fecha">
+				{presentation.date}
+			</td>
+			<td className="menu-cell" data-label="Categorias">
+				{presentation.categories.join(', ')}
+			</td>
+			<td className="menu-cell menu-cell-action">
+				<button
+					type="button"
+					className="menu-action"
+					onClick={() => navigateToPresentation(presentation.path)}
+				>
+					Presentar
+				</button>
+			</td>
+		</tr>
 	);
 }
 
