@@ -8,8 +8,9 @@ RUN npm ci
 
 COPY . .
 
+RUN npm run build:core
 RUN npm ci --prefix react/demo
-RUN npm run build
+RUN npm run build:demo
 
 FROM nginx:alpine
 
